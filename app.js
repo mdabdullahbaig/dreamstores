@@ -25,10 +25,11 @@ var express             =  require("express"),
 
    var configDB = require('./config/database.js');
 
-
+   mongoose.set('debug' , true);
    mongoose.connect(configDB.url);
    mongoose.Promise =Promise;
    //mongodb://<dbuser>:<dbpassword>@ds131763.mlab.com:31763/dreamstore
+
 
 
    const port = process.env.PORT || 3000 ;
