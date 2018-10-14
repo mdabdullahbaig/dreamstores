@@ -1,6 +1,10 @@
 module.exports = {
     // 'url' : 'mongodb://localhost/STORE',
 
-    'url' : 'mongodb://mdabdullahbaig1997:abdul7438@ds131763.mlab.com:31763/dreamstore/yourDB?authSource=yourDB&w=1',
+    'url' : 'mongodb://dreamstore2018:abdul7438@ds131903.mlab.com:31903/dreamstore',
     useNewUrlParser: true
 };
+
+
+
+//mongodb://<dbuser>:<dbpassword>@ds131903.mlab.com:31903/dreamstore
