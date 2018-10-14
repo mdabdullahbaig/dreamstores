@@ -29,7 +29,7 @@ var express             =  require("express"),
    //mongodb://<dbuser>:<dbpassword>@ds131763.mlab.com:31763/dreamstore
 
 
-   const port = process.env.PORT || 3000;
+   const port = process.env.PORT ;
 
 
     
