@@ -10,7 +10,9 @@ var express             =  require("express"),
     Cart                =  require("./models/cart"),
     User                =  require("./models/user"),
     Comment             =  require("./models/comment"),
-    seedDB              =  require("./seeds");
+    seedDB              =  require("./seeds"),
+    morgan              =  require('morgan'),
+    MongoClient         =  require('mongodb').MongoClient;
 
 
     //seedDB();  //seed the database
@@ -29,7 +31,7 @@ var express             =  require("express"),
    //mongodb://<dbuser>:<dbpassword>@ds131763.mlab.com:31763/dreamstore
 
 
-   const port = process.env.PORT ;
+   const port = process.env.PORT || 3000 ;
 
 
     
