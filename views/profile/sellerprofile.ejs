@@ -1,0 +1,77 @@
+<% include ../partials/header %>
+
+
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+<div class="container" style="color:black">
+<div class="row " style="display:flex;flex-wrap:wrap;">
+        <div class="col-md-4 ">
+
+
+
+        </div>
+        <div class="col-md-4 ">
+            
+            <div class="thumbnail">
+
+                    <h3 style="padding:0px 4px 0px 8px">SELLER INFORMATION </h3>
+                    <form action="" class="form-inline">  
+                            <label ><h4 style="padding:0px 4px 0px 8px">  Shop Name :-  </h4></label>
+                            <h4 style="padding:0px 4px 0px 8px"> <%= currentUser.shopname %> </h4> 
+   
+                       </form>
+                       <form action="" class="form-inline">  
+                            <label ><h4 style="padding:0px 4px 0px 8px">  Seller Name :-  </h4></label>
+                            <h4 style="padding:0px 4px 0px 8px"> <%= currentUser.sellername %> </h4> 
+   
+                       </form>
+                       <form action="" class="form-inline">  
+                            <label ><h4 style="padding:0px 4px 0px 8px">  Shop Address :-  </h4></label>
+                            <h4 style="padding:0px 4px 0px 8px"> <%= currentUser.shopaddress %> </h4> 
+   
+                       </form>
+                            
+                    <form action="" class="form-inline">  
+                         <label ><h4 style="padding:0px 4px 0px 8px">  User Name :-  </h4></label>
+                         <h4 style="padding:0px 4px 0px 8px"> <%= currentUser.username %> </h4> 
+
+                    </form>
+
+
+                    <form action="" class="form-inline">  
+                         <label ><h4 style="padding:0px 4px 0px 8px">  Email :-    </h4></label>
+                         <h4 style="padding:0px 4px 0px 8px"> <%= currentUser.email %> </h4> 
+
+                    </form>
+
+                    <form action="" class="form-inline">  
+                         <label ><h4 style="padding:0px 4px 0px 8px">  Mobile No :-   </h4></label>
+                         <h4 style="padding:0px 4px 0px 8px"> <%= currentUser.mobilenbr %> </h4> 
+
+                    </form>
+                    <form action="" class="form-inline">  
+                         <label ><h4 style="padding:0px 4px 0px 8px">  Gender :-   </h4></label>
+                         <h4 style="padding:0px 4px 0px 8px"> <%= currentUser.gender %> </h4> 
+
+                    </form>
+
+            
+            </div>
+
+            
+        </div>
+        <div class="col-md-4 ">
+
+
+            
+        </div>
+    
+    
+
+
+</div>
+</div>
+
+<% include ../partials/footer %>

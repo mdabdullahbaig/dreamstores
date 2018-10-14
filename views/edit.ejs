@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+
+                
+			<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+			
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		
+        </head>
+        <body style="background-color:brown">
+            <div class="container" style="padding: 20px">
+                
+                <form action="/home/<%=cart._id %>?_method=PUT" method="POST" class="form-horizontal" >
+                        <div class="form-group">
+                        
+                        <div class="col-sm-10">
+                                <h1>Edit Product Specification</h1>
+                            <input type="text" class="form-control" name="cart[product]" value="<%= cart.product%>"" >
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="image" class="col-sm-2 control-label"><strong>Edit Image </strong> </label>
+                    <div class="col-sm-10">
+                        
+                            <input type="file" name="image" id="image"accept="image/*"  >
+                       
+                    </div>
+                    </div>
+
+
+                        
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label"><strong>Information about Product</strong></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="cart[description1]" value="<%= cart.description1 %>" >
+                                    <input type="text" class="form-control" name="cart[description2]" value="<%= cart.description2 %>" >
+                                    <input type="text" class="form-control" name="cart[description3]" value="<%= cart.description3 %>" >
+                                    <input type="text" class="form-control" name="cart[description4]" value="<%= cart.description4 %>" >
+                                    <input type="text" class="form-control" name="cart[description5]" value="<%= cart.description5 %>" >
+                                    <input type="text" class="form-control" name="cart[description6]" value=" <%= cart.description6 %>">
+                                </div>
+                                </div>
+                                
+                        <div class="form-group">
+                                                
+                            <div class="col-sm-10">
+                                <textarea cols="20" rows="10" type="text" class="form-control" name="cart[description]" value="<%= cart.description %> "></textarea>
+                            </div>
+                            </div>
+                            
+                                <div class="form-group">
+                        
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" name="cart[price]" value="<%= cart.price %>">
+                                        </div>
+                                        </div>
+                        
+                        <div class="form-group">
+                         <label for="inputEmail3" class="col-sm-2 control-label"><strong>  Select Category</strong></label>
+                        <div class="col-sm-10">
+                        <select name="cart[select]" value="<%= cart.select%>">
+                                <option value="Books & Stationeries">Books & Stationeries</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Furnitures">Furnitures</option>
+                                <option value="Home Appliances">Home Appliances</option>
+                                <option value="Fashion">Fashion</option>
+                                <option value="Phones">Phones</option>
+                                <option value="Sports">Sports</option>
+                                <option value="Sweets & Cake">Sweets & Cake</option>
+                                
+                                
+                                
+                                
+                                
+                        </select>
+                        </div>
+                        </div>
+                       
+                        <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default">Update</button>
+                            <a href="/home" >Go Back</a>
+                        </div>
+                        </div>
+                    </form>  
+                    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+				  
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+                       
+        </div>
+        </body>
+
+
+
+    </html>

@@ -1,0 +1,110 @@
+<% include ../partials/header %>
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+
+<div class="container" style="color:brown">
+    <div class="row " style="display:flex;flex-wrap:wrap;">
+           
+            <div class="col-md-5 ">
+                <div class="thumbnail">
+
+                        <div class="container">
+                                        <form action="" class="form-inline my-2 my-lg-6">
+                                                        <a href="/home"> <img src="https://28b03yfvd7j3ji3l93ppzub1-wpengine.netdna-ssl.com/wp-content/uploads/2017/09/blackclearbag9-17.png" style="max-height :60px; max-width: 60px; padding: 6px; border: 3px solid brown; border-radius: 5%;"></a>
+                                                       <h2 style="padding:0px 0px 0px 8px"><b style="color:brown">DREAM</b></h2><h2 style="color:brown">STORE</h2>
+                                                  </form>
+                        </div>
+
+                    
+                            
+                            <h3 style="padding:0px 4px 0px 8px"> SHOP INFORMATION </h3>
+
+                            <form action="" class="form-inline">  
+                                        <label ><h4 style="padding:0px 4px 0px 8px">  Shop Name :-  </h4></label>
+                                        <h4 style="padding:0px 4px 0px 8px"> <%= user.shopname %> </h4> 
+             
+                             </form>
+
+                             <form action="" class="form-inline">  
+                                                <label ><h4 style="padding:0px 4px 0px 8px">  Seller Name :-  </h4></label>
+                                                <h4 style="padding:0px 4px 0px 8px"> <%= user.sellername %> </h4> 
+                     
+                             </form>
+
+                             <form action="" class="form-inline">  
+                                                        <label ><h4 style="padding:0px 4px 0px 8px">  Shop Address :-  </h4></label>
+                                                        <h4 style="padding:0px 4px 0px 8px"> <%= user.shopaddress %> </h4> 
+                             
+                              </form>
+                            
+                           <form action="" class="form-inline">  
+                                <label ><h4 style="padding:0px 4px 0px 8px">  Email :-    </h4></label>
+                                <h4 style="padding:0px 4px 0px 8px"> <%= user.email %> </h4> 
+     
+                           </form>
+
+                           <form action="" class="form-inline">  
+                                <label ><h4 style="padding:0px 4px 0px 8px">  Mobile No :-   </h4></label>
+                                <h4 style="padding:0px 4px 0px 8px"> <%= user.mobilenbr %> </h4> 
+     
+                           </form>
+                           
+                           
+                           
+                        
+    
+    
+                    </div>
+            </div>
+
+            <div class="col-md-7 ">
+                 
+
+                        <div class="thumbnail">
+                               <div class="container">
+                                 <h3 ><%= user.username %>'s carts:</h3>
+                               </div>                      
+                                
+                            
+                             
+                             
+                                       <ul>
+                                                             
+                                       <% carts.forEach(function(cart) { %>
+                                              <h4><li><a href="/home/<%= cart.id %>"><%= cart.product %></a></li> </h4> 
+                                       <% }); %>
+                                       
+                                       </ul>
+                        
+                           
+                       </div>
+                </div>
+
+
+    </div>
+
+   
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% include ../partials/footer %>

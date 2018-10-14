@@ -1,0 +1,82 @@
+<% include partials/header %>
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+
+<div class="container">
+    <div class="row    ">
+        
+        <div class="col-md-4 ">
+            <div class="thumbnail">
+                <img class="img-responsive" src="<%= cart.image %>">
+                    
+                 <p>
+                        <h3 > <strong><%= cart.product %> </strong>  </h3>
+                       <strong><h3> <em> ₹<%= cart.price%></em> </h3></strong>
+                      
+                 </p> 
+            </div>
+        </div>
+        <div class="col-md-4">
+                <div class="thumbnail">
+                        
+                       <h3><strong><em> <%= cart.select %> </em></strong> </h3>
+                        <strong> <em style="float:right">Uploded by <a href="/users/<%=cart.author.id %>"> <%=cart.author.username %> </a></em>  </strong>
+                       <strong> <em>Details:</em></strong> 
+                        
+                        <h5> <%=cart.description1 %></h5>
+                        <h5> <%=cart.description2 %></h5>
+                        <h5> <%=cart.description3 %></h5>
+                        <h5> <%=cart.description4 %></h5>
+                        <h5> <%=cart.description5 %></h5>
+                        <h5> <%=cart.description6 %></h5>
+                        <h5> <%=cart.description %></h5>
+                      
+                      <%  if(currentUser && cart.author.id.equals(currentUser._id)){%>
+                        <a href="/home/<%= cart._id%>/edit" class="btn btn-warning">Edit Cart</a>
+                        <form action="/home/<%= cart._id%>?_method=DELETE" method="POST" style="display:inline">
+                            <button class="btn btn-danger">Delete Cart</button>
+                        </form>
+                    <%} %>
+                    
+                        
+
+                </div>
+        </div>
+        
+        <div class="col-md-4">
+                <div class="thumbnail">
+
+                        <% cart.comments.forEach(function(comment){ %>
+                            <p >
+                                <strong><%= comment.author.username %></strong><br>
+                               
+                                    <%= comment.text %>
+                               
+                            
+                            </p>
+                            <%  if(currentUser && comment.author.id.equals(currentUser._id)){%>
+                            <a href="/home/<%= cart._id%>/comments/<%= comment._id%>/edit" class="btn btn-warning btn-xs">Edit Comment</a>
+                            <form action="/home/<%= cart._id%>/comments/<%= comment._id%>?_method=DELETE" method="POST" style="display:inline">
+                                <button class="btn btn-danger btn-xs">Delete Comment</button>
+                            </form>
+                            <%} %>
+                        <%}) %>
+                        
+                            <form action="/home/<%= cart._id%>/comments" method="POST" class="form-inline my-2 my-lg-6">
+                                            <input class="form-control mr-sm-2" type="text"  name="comment[text]" placeholder="Write a comment" aria-label="Search" >
+                                            <button class="btn btn-primary my-2 my-sm-0" type="submit">Post</button>
+                            </form>    
+                        
+                                         
+                           
+                           
+                 </div>
+        </div>
+        
+    </div>
+
+</div>
+
+<% include partials/footer %>
