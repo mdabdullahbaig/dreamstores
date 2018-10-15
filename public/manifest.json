@@ -1,0 +1,27 @@
+{
+    "name": "DREAM STORE",
+    "short_name": "DREAMSTORE",
+    "icons": [
+      {
+        "src": "/src/images/icons/store 192X192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/src/images/icons/store 512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+     
+    ],
+    "start_url": "",
+    "scope": ".",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "background_color": "#fff",
+    "theme_color": "",
+    "description": "This is the Online Store ",
+    "dir": "ltr",
+    "lang": "en-US"
+  }
+  
