@@ -14,7 +14,7 @@
       }
      
     ],
-    "start_url": "/landing.ejs",
+    "start_url": "/landingpage.ejs",
     "scope": ".",
     "display": "standalone",
     "orientation": "portrait-primary",
@@ -25,6 +25,6 @@
     "lang": "en-US"
   }
 
-  public\src\images\icons\store 192X192.png.png
+  
   
   
