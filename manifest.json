@@ -1,14 +1,14 @@
 {
-    "name": "DREAM STORE",
+    "name": "DREAM STORE this the faltu website",
     "short_name": "DREAMSTORE",
     "icons": [
       {
-        "src": "/public/src/images/icons/store 192X192.png",
+        "src": "/public/src/images/icons/store 192X192.png.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/public/src/images/icons/store 512x512.png",
+        "src": "/public/src/images/icons/store 512x512.png.png",
         "type": "image/png",
         "sizes": "512x512"
       }
@@ -24,5 +24,7 @@
     "dir": "ltr",
     "lang": "en-US"
   }
+
+  public\src\images\icons\store 192X192.png.png
   
   
