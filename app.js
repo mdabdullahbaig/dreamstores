@@ -162,6 +162,10 @@ app.use(categoryRoutes);
 // });
 
 //console.log('This is executed right after setTimeout()');
+app.get("https://damp-badlands-99499.herokuapp.com/manifest.json", function(req,res) {
+    res.render("landingpage");
+});
+
 app.get("/home/currentuser/profile", function(req,res){
     res.render("profile/currentprofile");
 });
