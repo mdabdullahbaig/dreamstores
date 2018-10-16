@@ -71,19 +71,6 @@ router.post("/home" ,isLoggedIn, upload.single('image') , function(req,res){
             req.flash('error', err.message);
             return res.redirect('back');
           }
-          if (deferredPrompt) {
-              deferredPrompt.prompt();
-              deferredPrompt.userChoise.then(function(choiceResult) {
-                  console.log('choiceResult.outcome');
-
-                  if (choiceResult.outcome === 'dismissed') {
-                      console.log('User cancelled installation');
-                    } else {
-                        console.log('User added to home screen');
-                    }
-              });
-              deferredPrompt = null;
-          }
           res.redirect('/home/' + cart.id);
         });
       });
