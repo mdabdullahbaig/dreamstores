@@ -34,7 +34,7 @@
       }
      
     ],
-    "start_url": "/landingpage",
+    "start_url": "https://damp-badlands-99499.herokuapp.com",
     "scope": ".",
     "display": "standalone",
     "orientation": "portrait-primary",
