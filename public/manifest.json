@@ -28,7 +28,7 @@
         "sizes": "192x192"
       },
       {
-        "src": "/src/images/icons/store 256x256.png",
+        "src": "/src/images/icons/store 256X256.png",
         "type": "image/png",
         "sizes": "256x256"
       }
@@ -38,7 +38,7 @@
     "scope": ".",
     "display": "standalone",
     "orientation": "portrait-primary",
-    "background_color": "#fff",
+    "background_color": "#DC0512",
     "theme_color": "#3f51b5",
     "description": "This is the Online Store ",
     "dir": "ltr",
