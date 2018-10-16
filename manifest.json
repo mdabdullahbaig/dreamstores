@@ -3,25 +3,26 @@
     "short_name": "DREAMSTORE",
     "icons": [
       {
-        "src": "/src/images/icons/store 192X192.png",
+        "src": "/public/src/images/icons/store 192X192.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/src/images/icons/store 512x512.png",
+        "src": "/public/src/images/icons/store 512x512.png",
         "type": "image/png",
         "sizes": "512x512"
       }
      
     ],
-    "start_url": "",
+    "start_url": "/landing.ejs",
     "scope": ".",
     "display": "standalone",
     "orientation": "portrait-primary",
     "background_color": "#fff",
-    "theme_color": "",
+    "theme_color": "#3f51b5",
     "description": "This is the Online Store ",
     "dir": "ltr",
     "lang": "en-US"
   }
+  
   
