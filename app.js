@@ -22,7 +22,7 @@ var express             =  require("express"),
        commentRoutes     =  require("./routes/comments"),
        categoryRoutes    =  require("./routes/categories");
      //  var deferredPrompt;
-    var navigator = require('web-midi-api');
+    //var navigator = require('web-midi-api');
 
    var configDB = require('./config/database.js');
 
@@ -79,17 +79,17 @@ app.use(categoryRoutes);
 //     window.Promise = Promise;
 //   }
 
-if('serviceWorker' in navigator) {
-    navigator.serviceWorker
-    .register('/sw.js')
-    .then(function () {
-        console.log('Service worker register!');
+// if('serviceWorker' in navigator) {
+//     navigator.serviceWorker
+//     .register('/sw.js')
+//     .then(function () {
+//         console.log('Service worker register!');
 
-    })
-    .catch(function(err) {
-        console.log(err);
-    });
-};
+//     })
+//     .catch(function(err) {
+//         console.log(err);
+//     });
+// };
 // window.addEventListener('beforeinstallprompt', function(event) {
 //     console.log('beforeinstallprompt fired');
 //     event.preventDefault();
