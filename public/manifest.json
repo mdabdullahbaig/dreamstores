@@ -34,7 +34,7 @@
       }
      
     ],
-    "start_url": "",
+    "start_url": "/landingpage",
     "scope": ".",
     "display": "standalone",
     "orientation": "portrait-primary",
