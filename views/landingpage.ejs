@@ -82,6 +82,13 @@
                             <li style="padding:8px"><a href="" style="color: black">About <i class=""></i> </a></li>
                             <li style="padding:8px" ><a href="" style="color: black"> <i class="" ></i>  Contact</a></li>
                             <li style="padding:8px"><a href="" style="color: black">Help <i class=""></i> </a></li>
+                            <% if(!currentUser){%>
+                                <li style="padding:8px"> <a  href="/login" style="color: black"><i class="fa fa-sign-in"></i>Login</a>
+                                <li style="padding:8px"> <a  href="/register" style="color: black"><i class="fa fa-user-plus"></i>Signup</a>
+                            <%} else{%>
+                                <li style="padding:8px"><a href="/home/currentuser/profile" style="color: black"><i class="fa fa-sign-in"></i>Signed in as <%= currentUser.username %></a>
+                                <li style="padding:8px"> <a  href="/logout" style="color: black">Logout<i class="fa fa-sign-out"></i></a>
+                            <% } %>
 
 
                         </ul>
@@ -101,7 +108,7 @@
                                                 <h2 style="color:brown"> <strong>WELCOME TO DREAM STORE </strong> </h2>
                                                 <h3 style="color:brown"> <em><strong>Not Just a Store</strong> </em> </h3>
                                         
-                                               <a href="/home"><button class="btn btn-default btn-lg" style="color:brown"> GET STARTED <i class="fa fa-arrow-right"></i></button></a> 
+                                               <a href="/home"><button class="btn btn-default btn-lg" style="color:brown"><strong> GET STARTED  <i class="fa fa-arrow-right"></i></strong></button></a> 
                                         </div>  
                                     </div>
                                 </div>     

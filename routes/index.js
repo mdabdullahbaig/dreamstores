@@ -53,7 +53,7 @@ router.post("/login",passport.authenticate("local",
 {
  successRedirect: "/home",
  failureRedirect: "/login",
- successFlash: "Welcome  to Dream Store and scroll down to see new added Item or Product" 
+ successFlash: "Scroll down to see new Added Products/Items" 
 }),function(req,res){
     
 }); 

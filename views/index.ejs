@@ -4,17 +4,14 @@
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
     
 
-<div class="container" style="padding:12px"> 
-        <header class="jumbotron">
-
-                <h4 style="color:brown"> <strong>DREAM</strong>STORE,Not just a Store </h4>
+<div class="container"> 
+        <header style="padding: 0px 0px 8px 0px">
             
                 <% if(currentUser && currentUser.isSeller){%>
                     <div class="container">
                             
                         <a href="/home/new"> <button class="btn bnt-default btn-lg" style="color: brown"><strong>Add Product</strong></button></a>
-                        <a href="/home/currentseller/profile"> <button class="btn bnt-default btn-lg" style="color: brown; float:right; "><strong>Seller Details</strong></button></a>
-                        
+                        <a href="/home/currentseller/profile"> <button class="btn bnt-default btn-lg" style="color: brown; float:right;"><strong>Seller Details</strong></button></a>
                     </div>    
                 <%} %>
             
@@ -34,7 +31,7 @@
                                 <img src="<%= cart.image %>">
                                 
                             <div class="caption">
-                                    <h4> <%= cart.product %> </h4>
+                                    <h4 style="color:brown"> <%= cart.product %> </h4>
                             </div>
                             <p>
                                 <a href="/home/<%= cart._id %>" class="btn btn-info btn-sm">More info</a>
