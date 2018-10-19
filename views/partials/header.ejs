@@ -19,7 +19,7 @@
   <!-- <link rel="stylesheet" href="/src/css/app.css">
   <link rel="stylesheet" href="/src/css/feed.css"> -->
   <link rel="manifest" href="public/manifest.json">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="#DC0512">
   <meta name="apple-mobile-web-app-title" content="DREAMSTORE">
@@ -74,14 +74,14 @@
                               </div>
                             </li>
                             
-                                <% if(!currentUser){%>
+                                <% if(!currentUser) { %>
                             <li class="nav-item active">
                               <a class="nav-link" href="/login"><i class="fa fa-sign-in"></i>Login</a>
                             </li>
                             <li class="nav-item active">
                                     <a class="nav-link" href="/register"><i class="fa fa-user-plus"></i>Signup</a>
                                 </li>
-                              <%} else{%>
+                              <%} else { %>
                                 <li class="nav-item active">
                                   <a class="nav-link" href="/home/currentuser/profile"><i class="fa fa-sign-in"></i>Signed in as <%= currentUser.username %></a>
                                 </li>

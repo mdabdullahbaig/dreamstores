@@ -41,6 +41,7 @@ var UserSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     }
+   
 });
 UserSchema.plugin(passportLocalMongoose);
 

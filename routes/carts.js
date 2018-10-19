@@ -24,7 +24,7 @@ cloudinary.config({
   api_secret: "_zt4sk7aGDIkMLQ3UmATb5iTbJk" 
 });
 
-
+var User = require("../models/user");
 var Cart = require("../models/cart");
 
 
@@ -45,6 +45,7 @@ router.get("/home", function(req, res){
         });
     } else {
         // Get all campgrounds from DB
+        
         Cart.find({}, function(err, allCarts){
            if(err){
                console.log(err);
@@ -52,20 +53,22 @@ router.get("/home", function(req, res){
               res.render("index",{carts:allCarts, noMatch: noMatch});
            }
         });
+    
     }
 });
 
 
-router.post("/home" ,isLoggedIn, upload.single('image') , function(req,res){
 
-    cloudinary.uploader.upload(req.file.path, function(result) {
+router.post("/home" ,isLoggedIn, upload.single('image') , async function(req,res){
+
+    cloudinary.uploader.upload(req.file.path, async function(result) {
         // add cloudinary url for the image to the cart object under image property
         req.body.cart.image = result.secure_url;
         // add author to cart
         req.body.cart.author = {
           id: req.user._id,
           username: req.user.username
-        }
+        };
         Cart.create(req.body.cart, function(err, cart) {
           if (err) {
             req.flash('error', err.message);
@@ -73,9 +76,7 @@ router.post("/home" ,isLoggedIn, upload.single('image') , function(req,res){
           }
           res.redirect('/home/' + cart.id);
         });
-      });
-
-  
+    });  
 });
 
 
@@ -83,7 +84,8 @@ router.get("/home/new",isLoggedIn, function(req,res){
     res.render("new");
 });
 //---------------------------------------------------------------------------------------------------------------
-//show page
+
+// show page
 router.get("/home/:id",isLoggedIn, function(req,res){
     Cart.findById(req.params.id).populate("comments").exec(function(err,foundCart){
         if(err){

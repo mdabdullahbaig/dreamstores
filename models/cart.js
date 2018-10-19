@@ -27,6 +27,10 @@ var cartSchema = new mongoose.Schema({
         trim: true,
         minlength: 1
     },
+    createdAt: {
+        type: Date,
+        default: Date.now()
+    },
     author:  {
         id: {
             type: mongoose.Schema.Types.ObjectId,

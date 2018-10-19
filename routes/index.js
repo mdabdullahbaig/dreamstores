@@ -5,6 +5,8 @@ var User = require("../models/user");
 var multer = require('multer');
 var Cart = require("../models/cart");
 
+
+
 router.get("/",function(req,res){
     res.render("landingpage");
 });
@@ -73,8 +75,9 @@ function isLoggedIn(req,res,next){
     res.redirect("/login");
 }
 
-// USER PROFILE
-router.get("/users/:id", function(req, res) {
+
+// user profile
+  router.get("/users/:id", function(req, res) {
     User.findById(req.params.id, function(err, foundUser) {
       if(err) {
         req.flash("error", "Something went wrong.");
@@ -89,6 +92,8 @@ router.get("/users/:id", function(req, res) {
       })
     });
   });
+
+
 
 
 
