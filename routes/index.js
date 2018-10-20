@@ -39,7 +39,7 @@ router.post("/register",function(req,res){
             return res.render("register");
         }
         passport.authenticate("local")(req,res,function(){
-            req.flash("success", "Welcome  to Dream Store " + user.username);
+            req.flash("success", "WELCOME TO DREAMSTORE " + user.username);
                 res.redirect("/home");
         });
     });
@@ -55,7 +55,7 @@ router.post("/login",passport.authenticate("local",
 {
  successRedirect: "/home",
  failureRedirect: "/login",
- successFlash: "Scroll down to see new Added Products/Items" 
+ successFlash: "WELCOME TO DREAMSTORE "    
 }),function(req,res){
     
 }); 
