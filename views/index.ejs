@@ -27,6 +27,7 @@
                 </div>       
                 <% carts.reverse().forEach(function(cart){%>
                   <div class="col-md-3 col-sm-6">
+                        <a href="/home/<%= cart._id %>">
                         <div class="thumbnail">
                                 <img src="<%= cart.image %>">
                                 
@@ -34,9 +35,10 @@
                                     <h4 style="color:brown"> <%= cart.product %> </h4>
                             </div>
                             <p>
-                                <a href="/home/<%= cart._id %>" class="btn btn-info btn-sm">More info</a>
+                              <button class="btn btn-info btn-sm">More info</button> 
                             </p>
                         </div>
+                        </a>
                       
                       
                   </div>

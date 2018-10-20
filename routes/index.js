@@ -55,7 +55,7 @@ router.post("/login",passport.authenticate("local",
 {
  successRedirect: "/home",
  failureRedirect: "/login",
- successFlash: "WELCOME TO DREAMSTORE "    
+ successFlash: "WELCOME TO DREAMSTORE, NOT JUST A STORE. "    
 }),function(req,res){
     
 }); 
