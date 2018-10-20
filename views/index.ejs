@@ -25,7 +25,7 @@
                         <h3  style="color:brown" ><%= noMatch %></h3>
                         <% } %>
                 </div>       
-                <% carts.forEach(function(cart){%>
+                <% carts.reverse().forEach(function(cart){%>
                   <div class="col-md-3 col-sm-6">
                         <div class="thumbnail">
                                 <img src="<%= cart.image %>">
