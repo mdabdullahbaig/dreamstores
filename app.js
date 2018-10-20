@@ -54,6 +54,7 @@ app.use(methodOverride('_method'));
 // app.use(cookieParser());
 // app.use(morgan('dev'));
 app.use(flash());
+app.locals.moment = require("moment");
 
 //PASSPORT CONFIGURATION open
 app.use(require("express-session")({

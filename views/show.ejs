@@ -22,16 +22,17 @@
                 <div class="thumbnail">
                         
                        <h3><strong><em> <%= cart.select %> </em></strong> </h3>
-                        <strong> <em style="float:right">Uploded by <a href="/users/<%=cart.author.id %>"> <%=cart.author.username %> </a></em>  </strong>
-                       <strong> <em>Details:</em></strong> 
+                        <strong> <em>Uploded By: <a href="/users/<%=cart.author.id %>"> <%=cart.author.username %> </a>,</em> <%= moment(cart.createdAt).format('Do MMM YYYY')%>   </strong><br>
+                       <strong> <em>Product Details:</em></strong> 
                         
-                        <h5> <%=cart.description1 %></h5>
-                        <h5> <%=cart.description2 %></h5>
-                        <h5> <%=cart.description3 %></h5>
-                        <h5> <%=cart.description4 %></h5>
-                        <h5> <%=cart.description5 %></h5>
-                        <h5> <%=cart.description6 %></h5>
-                        <h5> <%=cart.description %></h5>
+                        <h5 style="color:black"> <%=cart.description1 %></h5>
+                        <h5 style="color:black"> <%=cart.description2 %></h5>
+                        <h5 style="color:black"> <%=cart.description3 %></h5>
+                        <h5 style="color:black"> <%=cart.description4 %></h5>
+                        <h5 style="color:black"> <%=cart.description5 %></h5>
+                        <h5 style="color:black"> <%=cart.description6 %></h5>
+                        <h5 style="color:black"> <%=cart.description %></h5>
+                       
                       
                       <%  if(currentUser && cart.author.id.equals(currentUser._id)){%>
                         <a href="/home/<%= cart._id%>/edit" class="btn btn-warning">Edit Cart</a>
@@ -47,12 +48,12 @@
         
         <div class="col-md-4">
                 <div class="thumbnail">
-
+                       
                         <% cart.comments.forEach(function(comment){ %>
-                            <p >
+                            <p style="color:black" >
                                 <strong><%= comment.author.username %></strong><br>
                                
-                                    <%= comment.text %>
+                                   <%= comment.text %> , <%= moment(comment.createdAt).format('Do MMM YYYY')%> 
                                
                             
                             </p>
