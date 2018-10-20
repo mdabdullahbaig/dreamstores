@@ -11,14 +11,14 @@ var express             =  require("express"),
     User                =  require("./models/user"),
     Comment             =  require("./models/comment"),
     seedDB              =  require("./seeds"),
-   
+    MongoClient         =  require('mongodb').MongoClient,
     morgan              =  require('morgan');
-    MongoClient         =  require('mongodb').MongoClient;
+   
 
 // var  cookieParser        = require("cookie-parser"),
     //seedDB();  //seed the database
 
-    // var http = require('http');
+     var http = require('http');
     // var socketIO = require('socket.io');
     // var server = http.createServer(app);
     // var io = socketIO(server);
@@ -47,7 +47,7 @@ var express             =  require("express"),
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('uploads'));
-app.use(express.static(__dirname + "public"));
+app.use(express.static("public"));
 
 app.set("view engine","ejs");
 app.use(methodOverride('_method'));
