@@ -1,0 +1,49 @@
+<% include ../partials/header %>
+
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    
+
+<div class="container" style="padding:15px"> 
+    
+
+                
+            
+                
+
+        <div class="row text-center" style="display:flex;flex-wrap:wrap;">
+           
+            <% carts.reverse().forEach(function(cart){%>
+                <div class="col-md-3 col-sm-6">
+                      <div class="thumbnail">
+                              <img src="<%= cart.image %>">
+                              
+                          <div class="caption">
+                                  <h4 style="color:brown"> <%= cart.product %> </h4>
+                                
+                          </div>
+                          <p>
+                              <a href="/home/<%= cart._id%>" class="btn btn-info">More info</a>
+                          </p>
+                      </div>
+                    
+                    
+                </div>
+                
+              <%});  %>
+            
+               
+        </div>
+                    
+
+</div>
+
+
+
+
+
+
+<% include ../partials/footer %>
+		
+
+

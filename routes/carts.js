@@ -74,7 +74,7 @@ router.post("/home" ,isLoggedIn, upload.single('image') , async function(req,res
             req.flash('error', err.message);
             return res.redirect('back');
           }
-          res.redirect('/home/' + cart.id);
+            res.redirect('/home/' + cart.id);
         });
     });  
 });
