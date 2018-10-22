@@ -5,6 +5,7 @@ var express             =  require("express"),
     flash               =  require("connect-flash"),
     passport            =  require("passport"),
     LocalStrategy       =  require("passport-local"),
+    cookieParser        =  require("cookie-parser"),
     methodOverride      =  require("method-override"),
     multer              =  require('multer'),
     Cart                =  require("./models/cart"),
@@ -34,6 +35,8 @@ var express             =  require("express"),
    mongoose.set('debug' , true);
    mongoose.connect(configDB.url);
    mongoose.Promise =Promise;
+
+  // require('./config/passport')(passport);
    //mongodb://<dbuser>:<dbpassword>@ds131763.mlab.com:31763/dreamstore
 
 
@@ -48,6 +51,7 @@ var express             =  require("express"),
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('uploads'));
 app.use(express.static("public"));
+app.use (bodyParser.json());
 
 app.set("view engine","ejs");
 app.use(methodOverride('_method'));
@@ -55,6 +59,8 @@ app.use(methodOverride('_method'));
 // app.use(morgan('dev'));
 app.use(flash());
 app.locals.moment = require("moment");
+app.use(cookieParser('secret'));
+app.use(morgan('dev'))
 
 //PASSPORT CONFIGURATION open
 app.use(require("express-session")({
@@ -68,6 +74,7 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
 //close
 app.use(function(req,res,next){
     res.locals.currentUser = req.user;

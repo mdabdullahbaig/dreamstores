@@ -4,6 +4,13 @@ var passport = require("passport");
 var User = require("../models/user");
 var multer = require('multer');
 var Cart = require("../models/cart");
+var async = require("async");
+var nodemailer = require("nodemailer");
+var crypto = require("crypto");
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey('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');
+
+
 
 
 
@@ -19,13 +26,18 @@ router.get("/register",function(req,res){
 
 //signup logic open
 router.post("/register",function(req,res){
-    var newUser = new User({username: req.body.username,
+    token = crypto.randomBytes(20).toString('hex');
+    var newUser = new User(
+        {
+        username: req.body.username,
         email: req.body.email,
         mobilenbr: req.body.mobilenbr,
         gender: req.body.gender,
         sellername: req.body.sellername,
         shopname: req.body.shopname,
-        shopaddress: req.body.shopaddress
+        shopaddress: req.body.shopaddress,
+        verifyToken: token,
+        active: false
 
        });
     if(req.body.isSeller === 'seller'){
@@ -38,12 +50,31 @@ router.post("/register",function(req,res){
             req.flash("error", err.message);
             return res.render("register");
         }
-        passport.authenticate("local")(req,res,function(){
-            req.flash("success", "WELCOME TO DREAM STORE " + user.username);
+        // passport.authenticate("local")(req,res,function(){
+        //     req.flash("success", "WELCOME TO DREAM STORE " + user.username);
+        //         res.redirect("/home");
+        // });
+    
+
+//sending email via sendgrid
+            const msg = {
+                to: user.email,
+                from: 'verify@dreamstore.in',
+                subject: 'Dreamstore email verification',
+                text: ' Please click on the following link, or paste into your browser to verify your email address:\n\n' + 
+                'http://' + req.headers.host + '/verify/' + token + '\n\n' +
+                'If you did not request this, please ignore this email.\n'
+            };
+
+            sgMail.send(msg,function(err) {
+                console.log('mail sent');
+                req.flash ('success', 'An e-mail has been sent to ' + user.email + ' with further instructions for verification of your gmail id.');
                 res.redirect("/home");
-        });
+            });
     });
 });
+
+
 //close
 //login form open
 router.get("/login",function(req,res){
@@ -67,13 +98,302 @@ router.get("/logout",function(req,res){
     res.redirect("/home");
 });
 //close
-//middlewere open
-function isLoggedIn(req,res,next){
-    if(req.isAuthenticated()){
-        return next();
-    }
-    res.redirect("/login");
-}
+// //forgot  password
+// router.get ('/forgot', function(req,res) {
+//     res.render('forgot');
+// });
+
+// router.post('/forgot', function(req,res,next) {
+//     async.waterfall( [
+//         function(done) {
+//             crypto.randomBytes(20, function(err, buf) {
+//                 var token = buf.toString('hex');
+//                 done(err, token);
+//             });
+//         },
+//         function(token, done) {
+//             User.findOne({ email: req.body.email}, function(err,user) {
+//                 if(!user) {
+//                     req.flash('error', 'No account with that email address exists.');
+//                     return res.redirect('/forgot');
+//                 }
+//                 user.resetPasswordToken = token;
+//                 user.resetPasswordExpires = Date.now() + 3600000; //1 hour
+//                 user.save(function(err) {
+//                     done(err, token, user);
+//                 });
+//             });
+//         },
+//         function(token, user, done) {
+//             var smtpTransport = nodemailer.createTransport({
+//                 service: 'Gmail',
+//                 auth: {
+//                     user: 'abdullahhussainbaig1997@gmail.com',
+//                     pass: 'Ahussain@2014'
+//                 }
+//             });
+//             var mailOptions = {
+//                 to: user.email,
+//                 from: 'abdullahhussainbaig1997@gmail.com',
+//                 subject: 'Node.js Password Reset',
+//                 text: 'you are receiving this because you (or someone else) have requested the reset of the password' + 
+//                     'Please click on the following link, or paste this into your browser to complete the process ' + 
+//                     'http://' + req.headers.host + '/reset/' + token + '\n\n' + 
+//                     'If you did not request this, please ignore this email and your password will remain unchange'
+
+//             };
+//             smtpTransport.sendMail(mailOptions, function(err) {
+//                 console.log('mail sent');
+//                 req.flash ('success', 'An e-mail has been sent to ' + user.email + 'with further instructions.');
+//                 done(err, 'done');
+//             });
+//         }
+//     ], function(err) {
+//         if (err) return next(err);
+//         res.redirect('/forgot');
+//     });
+// });
+
+// //reset password
+// router.get('/reset/:token', function(req,res) {
+//     User.findOne({ resetPasswordExpires: req.params.token, resetPasswordExpires: { $gt: Date.now() } }, function(err, user) {
+//         if (!user) {
+//             req.flash('error', 'Password reset token is invalid or has expired.');
+//             return res.redirect('/forgot');
+//         }
+//         res.redirect('reset', {token: req.params.token});
+//     });
+// });
+
+// router.post('/reset/:token', function(req,res) {
+//     async.waterfall([
+//         function(done) {  
+//             User.findOne({ resetPasswordToken: req.params.token, resetPasswordExpires: {$gt: Date.now() } }, function(err, user) {
+//                 if (!user) {
+//                     req.flash('error', 'Password reset token is invalid or has expired.');
+//                     return res.redirect('back');
+//                 }
+//                 if(req.body.password === req.body.confirm) {
+//                     user.setPassword(req.body.password, function(err) {
+//                         user.resetPasswordToken = undefined;
+//                         user.resetPasswordExpires = undefined;
+                        
+//                         user.save(function(err) {
+//                             req.logIn(user, function(err) {
+//                                 done(err,user);
+//                             });
+//                         });
+//                     })
+//                 } else {
+//                     req.flash('error', 'Passwords do not match.');
+//                     return res.redirect('back');
+//                 }
+//             });
+//         },
+//         function(user, done) {
+//            var smtpTransport = nodemailer.createTransport({
+//                service: 'Gmail',
+//                auth: {
+//                    user: 'abdullahhussainbaig1997@gmail.com',
+//                    pass: 'Ahussain@2014'
+//                }
+//            });
+//            var mailOptions = {
+//             to: user.email,
+//             from: 'abdullahhussainbaig1997@gmail.com',
+//             subject: 'Your password has been changed',
+//             text: 'hello,\n\n' +
+//             'This is a confirmation that the password for your account ' + user.email + ' has just changed'
+               
+//            } ;
+//            smtpTransport.sendMail(mailOptions, function(err) {
+//                req.flash('success', 'Success! Your password has been changed.');
+//                done(err);
+//            });
+//         }
+//     ], function(err) {
+//         res.redirect('/home');
+//     });
+// });
+
+// forgot password
+router.get('/forgot', function(req, res) {
+    res.render('forgot');
+  });
+  
+  router.post('/forgot', function(req, res, next) {
+    async.waterfall([
+      function(done) {
+        crypto.randomBytes(20, function(err, buf) {
+          var token = buf.toString('hex');
+          done(err, token);
+        });
+      },
+      function(token, done) {
+        User.findOne({ email: req.body.email }, function(err, user) {
+          if (!user) {
+            req.flash('error', 'No account with that email address exists.');
+            return res.redirect('/forgot');
+          }
+  
+          user.resetPasswordToken = token;
+          user.resetPasswordExpires = Date.now() + 3600000; // 1 hour
+  
+          user.save(function(err) {
+            done(err, token, user);
+          });
+        });
+      },
+      function(token, user, done) {
+        var smtpTransport = nodemailer.createTransport({
+          service: 'Sendgrid', 
+          auth: {
+            user: 'mdabdullahbaig',
+            pass: 'Abdul@7438'
+          }
+        });
+        var mailOptions = {
+          to: user.email,
+          from: 'verify@dreamstore.in',
+          subject: ' Password Reset for Dreamstore',
+          text: 'You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n' +
+            'Please click on the following link, or paste this into your browser to complete the process:\n\n' +
+            'http://' + req.headers.host + '/reset/' + token + '\n\n' +
+            'If you did not request this, please ignore this email and your password will remain unchanged.\n'
+        };
+        smtpTransport.sendMail(mailOptions, function(err) {
+          console.log('mail sent');
+          req.flash('success', 'An e-mail has been sent to ' + user.email + ' with further instructions.');
+          done(err, 'done');
+        });
+      }
+    ], function(err) {
+      if (err) return next(err);
+      res.redirect('/forgot');
+    });
+  });
+  
+  router.get('/reset/:token', function(req, res) {
+    User.findOne({ resetPasswordToken: req.params.token, resetPasswordExpires: { $gt: Date.now() } }, function(err, user) {
+      if (!user) {
+        req.flash('error', 'Password reset token is invalid or has expired.');
+        return res.redirect('/forgot');
+      }
+      res.render('reset', {token: req.params.token});
+    });
+  });
+  
+  router.post('/reset/:token', function(req, res) {
+    async.waterfall([
+      function(done) {
+        User.findOne({ resetPasswordToken: req.params.token, resetPasswordExpires: { $gt: Date.now() } }, function(err, user) {
+          if (!user) {
+            req.flash('error', 'Password reset token is invalid or has expired.');
+            return res.redirect('back');
+          }
+          if(req.body.password === req.body.confirm) {
+            user.setPassword(req.body.password, function(err) {
+              user.resetPasswordToken = undefined;
+              user.resetPasswordExpires = undefined;
+  
+              user.save(function(err) {
+                req.logIn(user, function(err) {
+                  done(err, user);
+                });
+              });
+            })
+          } else {
+              req.flash("error", "Passwords do not match.");
+              return res.redirect('back');
+          }
+        });
+      },
+      function(user, done) {
+        var smtpTransport = nodemailer.createTransport({
+          service: 'Sendgrid', 
+          auth: {
+            user: 'mdabdullahbaig',
+            pass: 'Abdul@7438'
+          }
+        });
+        var mailOptions = {
+          to: user.email,
+          from: 'verify@dreamstore.in',
+          subject: 'Your password has been changed',
+          text: 'Hello,\n\n' +
+            'This is a confirmation that the password for your account ' + user.email + ' has just been changed.\n'
+        };
+        smtpTransport.sendMail(mailOptions, function(err) {
+          req.flash('success', 'Success! Your password has been changed.');
+          done(err);
+        });
+      }
+    ], function(err) {
+      res.redirect('/home');
+    });
+  });
+
+  //gmail verification
+  router.get('/verify/:token', function(req,res) {
+      async.waterfall([
+          function(done) {
+              User.findOne({verifyToken: req.params.token}, function(err,user) {
+                  if (!user) {
+                      req.flash('error', 'Token is invalid.');
+                      return res.redirect('back');
+                  }
+                  user.verifyToken = undefined;
+                  user.active = true;
+
+                  user.save(function(err) {
+                      done(err,user);
+                  });
+              });
+          },
+
+
+
+          //verify gmail using sendgrid
+
+          function(user, done) {
+            var smtpTransport = nodemailer.createTransport({
+              service: 'Sendgrid', 
+              auth: {
+                user: 'mdabdullahbaig',
+                pass: 'Abdul@7438'
+              }
+            });
+            var mailOptions = {
+              to: user.email,
+              from: 'verify@dreamstore.in',
+              subject: 'Email address verified',
+              text: 'Hello,\n\n' +
+                'This is a confirmation that your email ' + user.email + ' has just been verified.\n'
+            };
+            smtpTransport.sendMail(mailOptions, function(err) {
+                if (err) {
+                    done(err);
+                }
+            
+            req.flash('success', 'Email address has been verified.');
+            res.redirect("/home");
+            });
+          }
+        ], function(err) {
+          res.redirect('/home');
+        });
+      });
+
+
+
+
+    
+  
+  
+  
+
+
+
 
 
 // user profile
@@ -92,6 +412,15 @@ function isLoggedIn(req,res,next){
       })
     });
   });
+
+
+  //middlewere open
+function isLoggedIn(req,res,next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    res.redirect("/login");
+}
 
 
 
