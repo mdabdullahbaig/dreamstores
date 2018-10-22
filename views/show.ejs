@@ -22,8 +22,8 @@
                 <div class="thumbnail">
                         
                        <h3><strong><em> <%= cart.select %> </em></strong> </h3>
-                        <strong> <em>Uploded By: <a href="/users/<%=cart.author.id %>"> <%=cart.author.username %> </a>,</em> <%= moment(cart.createdAt).format('Do MMM YYYY')%>   </strong><br>
-                       <strong> <em>Product Details:</em></strong> 
+                       
+                       <strong> <em> Details:</em></strong> 
                         
                         <h5 style="color:black"> <%=cart.description1 %></h5>
                         <h5 style="color:black"> <%=cart.description2 %></h5>
@@ -32,6 +32,8 @@
                         <h5 style="color:black"> <%=cart.description5 %></h5>
                         <h5 style="color:black"> <%=cart.description6 %></h5>
                         <h5 style="color:black"> <%=cart.description %></h5>
+                        <strong> <em>Uploded By: <a href="/users/<%=cart.author.id %>"> <%=cart.author.username %> </a>,</em> <%= moment(cart.createdAt).format('Do MMM YYYY')%>   </strong><br>
+                        <strong> <em> <a href="/users/<%=cart.author.id %>"> More About Store Which Uploaded This Product</a></em></strong><br>
                        
                       
                       <%  if(currentUser && cart.author.id.equals(currentUser._id)){%>
