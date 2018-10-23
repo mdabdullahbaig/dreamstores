@@ -37,7 +37,8 @@ router.post("/register",function(req,res){
         shopname: req.body.shopname,
         shopaddress: req.body.shopaddress,
         verifyToken: token,
-        active: false
+        active: false,
+        shopmap: req.body.shopmap
 
        });
     if(req.body.isSeller === 'seller'){

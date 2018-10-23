@@ -48,6 +48,10 @@ var UserSchema = new mongoose.Schema({
         type:  String,
         trim: true
     },
+    shopmap: {
+        type: String,
+        trim: true
+    },
     isSeller: {
         type: Boolean,
         default: false

@@ -125,7 +125,7 @@ router.delete("/home/:id", checkCartOwnership, function(req,res){
         if(err){
             res.redirect("/home");
         } else {
-            req.flash("success", "Product Successfully Deleted!!!");
+             req.flash("success", "Product Successfully Deleted!!!");
             res.redirect("/home");
            
         }
