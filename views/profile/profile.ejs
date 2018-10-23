@@ -47,7 +47,7 @@
 
                            <form action="" class="form-inline">  
                                 <!-- <label ><h4 style="padding:0px 4px 0px 8px; color: green"> <i class="fa fa-phone"></i>  Call :-</h4></label> -->
-                                <h4 style="padding:0px 4px 0px 8px; color: rgb(10, 241, 10)"> <i class="fa fa-phone"></i>  Call :-    <a href="#">   <%= user.mobilenbr %></a> </h4>
+                                <a href="tel:<%= user.mobilenbr %>" class="phone"> <h4 style="padding:0px 4px 0px 8px"> <i class="fa fa-phone" style=" color: rgb(10, 241, 10)"></i>  Call :-       <%= user.mobilenbr %></h4></a> 
                     </div>
             </div>
 
