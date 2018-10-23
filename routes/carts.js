@@ -74,7 +74,9 @@ router.post("/home" ,isLoggedIn, upload.single('image') , async function(req,res
             req.flash('error', err.message);
             return res.redirect('back');
           }
+            req.flash("success", "Product Successfully Uploaded!!!");
             res.redirect('/home/' + cart.id);
+           
         });
     });  
 });
@@ -109,7 +111,9 @@ router.put("/home/:id", checkCartOwnership, function(req,res){
         if(err){
             res.redirect("/home");
         } else{
+            req.flash("success", "Product Successfully Updated!!!");
             res.redirect("/home/" + req.params.id);
+            
         }
     });
 });
@@ -121,7 +125,9 @@ router.delete("/home/:id", checkCartOwnership, function(req,res){
         if(err){
             res.redirect("/home");
         } else {
+            req.flash("success", "Product Successfully Deleted!!!");
             res.redirect("/home");
+           
         }
     });
 

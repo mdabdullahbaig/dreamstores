@@ -34,7 +34,9 @@ router.post("/home/:id/comments",isLoggedIn, function(req,res){
                     
                    cart.comments.push(comment);
                     cart.save(); 
+                    req.flash("success", "Sucessfully Comment Created!!!");
                    res.redirect("/home/" + cart._id);
+                  
                 }
             })
             //res.render("comments/new",{cart: cart});
@@ -60,7 +62,9 @@ router.put("/home/:id/comments/:comment_id",checkCommentOwnership, function(req,
         if(err) {
             res.redirect("back");
         } else {
+            req.flash("success", "Successfully  Comment Updated!!!");
             res.redirect("/home/" + req.params.id);
+           
         }
      });
 });
@@ -70,7 +74,9 @@ router.delete("/home/:id/comments/:comment_id",checkCommentOwnership, function(r
         if(err){
             res.redirect("back");
         } else {
+            req.flash("success", "Successfully  Comment Deleted!!!");
             res.redirect("/home/" + req.params.id);
+           
         }
     });
 });

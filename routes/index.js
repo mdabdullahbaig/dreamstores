@@ -265,7 +265,8 @@ router.get('/forgot', function(req, res) {
                     done(err);
                 }
             
-            req.flash('success', 'Email address has been verified.');
+            // req.flash('success', 'Email address has been verified.');
+            req.flash("success", "WELCOME TO DREAM STORE " + user.username + "Email address has been verified!!!" );
             res.redirect("/home");
             });
           }
