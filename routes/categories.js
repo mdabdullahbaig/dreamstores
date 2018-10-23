@@ -104,26 +104,12 @@ router.get("/home/category/SweetsCake",function(req,res){
 
 
     //middlewere open
-    function isLoggedIn(req,res,next){
-        var active;
-       if(req.isAuthenticated()){
-         function verify() {
-           User.findOne({email: req.user.email}, function(err,user) {
-             active = user.active;
-             if (active = true) {
-               return next();
-             }
-             req.flash("error", "You need to verify your email to see the content!");
-             res.redirect("/home");
-           
-           });
-         } 
-         return verify();
-          } else {
-            req.flash("error", "You need to be logged in to do that!");
-            res.redirect("/login");
-          }
-     };
+function isLoggedIn(req,res,next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    res.redirect("/login");
+};
     
 
 module.exports = router;

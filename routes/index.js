@@ -100,26 +100,11 @@ router.get("/logout",function(req,res){
 
  //middlewere open
  function isLoggedIn(req,res,next){
-   var active;
-  if(req.isAuthenticated()){
-    function verify() {
-      User.findOne({email: req.user.email}, function(err,user) {
-        active = user.active;
-        if (active = true) {
-          return next();
-        }
-        req.flash("error", "You need to verify your email to see the content!");
-        res.redirect("/home");
-      
-      });
-    } 
-    return verify();
-     } else {
-       req.flash("error", "You need to be logged in to do that!");
-       res.redirect("/login");
-     }
-};
- 
+  if (req.isAuthenticated()) {
+      return next();
+  }
+  res.redirect("/login");
+}
 
 // forgot password
 router.get('/forgot', function(req, res) {
