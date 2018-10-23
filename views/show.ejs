@@ -5,11 +5,11 @@
 
 
 <div class="container" style="color:brown">
-    <div class="row    ">
+    <div class="row">
         
         <div class="col-md-4 ">
             <div class="thumbnail">
-                <img src="<%= cart.image %>">
+                <a href="<%= cart.image %>"> <img src="<%= cart.image %>"></a>
                     
                  <p>
                         <h3 > <strong><%= cart.product %> </strong>  </h3>
@@ -18,7 +18,33 @@
                  </p> 
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-2 ">
+            <div class="thumbnail">
+               <a href="<%= cart.image1 %>"> <img src="<%= cart.image1 %>"></a>
+                
+            </div>
+        </div>
+        <div class="col-md-2 ">
+            <div class="thumbnail">
+                <a href="<%= cart.image2 %>">  <img src="<%= cart.image2 %>"></a>
+               
+            </div>
+        </div>
+        <div class="col-md-2 ">
+            <div class="thumbnail">
+                <a href="<%= cart.image3 %>">  <img src="<%= cart.image3 %>"></a>
+                
+            </div>
+        </div>
+        <div class="col-md-2 ">
+            <div class="thumbnail">
+                <a href="<%= cart.image4 %>">  <img src="<%= cart.image4 %>"></a>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">    
+        <div class="col-md-6">
                 <div class="thumbnail">
                         
                        <h3><strong><em> <%= cart.select %> </em></strong> </h3>
@@ -48,7 +74,7 @@
                 </div>
         </div>
         
-        <div class="col-md-4">
+        <div class="col-md-6">
                 <div class="thumbnail">
                        
                         <% cart.comments.forEach(function(comment){ %>

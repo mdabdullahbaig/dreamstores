@@ -12,6 +12,10 @@ var cartSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    image1: String,
+    image2: String,
+    image3: String,
+    image4: String,
     select:  String,
     description1: String,
     description2: String,
