@@ -33,7 +33,7 @@ var cartSchema = new mongoose.Schema({
     },
     createdAt: {
         type: Date,
-        default: Date.now() + 34200000
+        default: Date.now()
     },
     
     author:  {
