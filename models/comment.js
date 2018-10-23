@@ -5,7 +5,7 @@ var commentSchema = new mongoose.Schema({
     text:    String,
     createdAt: {
         type: Date,
-        default: Date.now()
+        default: Date.now() + 34200000
     },
     author:  {
         id: {
