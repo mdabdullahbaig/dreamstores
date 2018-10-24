@@ -1,4 +1,124 @@
-<% include partials/header %>
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+		
+      <!-- <meta name="viewport" content="width=device-width, initial-scale=1">	 -->
+
+      <meta charset="UTF-8">
+      <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+      <title>DREAM STORE</title>
+
+
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css">
+  <!-- <link rel="stylesheet" href="/src/css/app.css">
+  <link rel="stylesheet" href="/src/css/feed.css"> -->
+  <!-- <link rel="manifest" href="public/manifest.json"> -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#DC0512">
+  <meta name="apple-mobile-web-app-title" content="DREAMSTORE">
+  <link rel="apple-touch-icon" href="/public/src/images/icons/store 24X24.png" sizes="24x24">
+  <link rel="apple-touch-icon" href="/public/src/images/icons/store 48X48.png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/public/src/images/icons/store 96X96.png" sizes="96x96">
+  <link rel="apple-touch-icon" href="/public/src/images/icons/store 144X144.png" sizes="144x144">
+  <link rel="apple-touch-icon" href="/public/src/images/icons/store 192X192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/public/src/images/icons/store 256X256.png" sizes="256x256">
+  <meta name="msapplication-TileColor" content="#DC0512">
+  <meta name="theme-color" content="#3f51b5">
+  
+  
+
+			<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+			
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+
+   
+        </head>
+        <body >
+			
+            
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                       <a href="/" style="padding-left:15px"> <img src="https://28b03yfvd7j3ji3l93ppzub1-wpengine.netdna-ssl.com/wp-content/uploads/2017/09/blackclearbag9-17.png" style="max-height :35px; max-width: 35px; padding: 5px; border: 2px solid brown; border-radius: 5%;"></a>
+                        <a class="navbar-brand" href="/" style="color:brown"><b style="color:brown">DREAM</b>STORE</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                      
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                              <a class="nav-link" href="/home"><i class="fa fa-home"></i>Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            
+                
+                            
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-book"></i>Category
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/home/category/bookstationeries">Books & Stationeries</a>
+                                <a class="dropdown-item" href="/home/category/Electronics">Electronics</a>
+                                <a class="dropdown-item" href="/home/category/Furnitures">Furnitures</a>
+                                <a class="dropdown-item" href="/home/category/HomeAppliances">Home Appliances</a>
+                                <a class="dropdown-item" href="/home/category/Fashion">Fashion</a>
+                                <a class="dropdown-item" href="/home/category/Phones">Phones</a>
+                                <a class="dropdown-item" href="/home/category/Sports">Sports</a>
+                                <a class="dropdown-item" href="/home/category/SweetsCake">Sweets & Cake</a>
+                            
+                              </div>
+                            </li>
+                            
+                                <% if(!currentUser) { %>
+                            <li class="nav-item active">
+                              <a class="nav-link" href="/login"><i class="fa fa-sign-in"></i>Login</a>
+                            </li>
+                            <li class="nav-item active">
+                                    <a class="nav-link" href="/register"><i class="fa fa-user-plus"></i>Signup</a>
+                                </li>
+                              <%} else { %>
+                                <li class="nav-item active">
+                                  <a class="nav-link" href="/home/currentuser/profile"><i class="fa fa-sign-in"></i>Signed in as <%= currentUser.username %></a>
+                                </li>
+                                <li class="nav-item active">
+                                        <a class="nav-link" href="/logout">Logout<i class="fa fa-sign-out"></i></a>
+                                    </li>
+                                  <% } %>
+
+                          </ul>
+                          <ul class="nav navbar-nav navbar-right">
+
+                          
+                          <form action="/home" method="GET" class="form-inline my-2 my-lg-3">
+                            <input class="form-control mr-sm-2 " name="search" type="search" placeholder="Search" aria-label="Search" >
+                            <button class="btn btn-info" type="submit">Search</button>
+                          </form>
+                        </ul>
+                        </div>
+                        </nav>
+          </div>
+                        <div class="container" style="padding: 15px">
+                        <% if(error && error.length > 0) { %>
+                          <div class="alert alert-danger" role="alert"> <%= error %>   </div>
+                        <%} %>
+                        <% if(success && success.length > 0) { %>
+                          <div class="alert alert-success" role="alert"> <%= success %>   </div>
+                        <%} %>
+                        </div>
+            
+                      
 
 
                 <div class="container" style="color:brown">
@@ -36,42 +156,48 @@
                                       </div>
 
                               <div class="form-group">
-                                    <label for="inputEmail3" class="col-sm-10 control-label"><h5>Select User/Seller </h5>  (If you have a <strong>Shop</strong>  then select <strong>Seller</strong> option otherwise select <strong> User</strong> option)</label>
+                                    
                                      <div class="col-sm-10">
                                             
-                                            <input type="radio" name="isSeller" value="user"> <strong>User </strong>
-                                            <input type="radio" name="isSeller" value="seller"> <strong>Seller </strong>
+                                            <input type="checkbox" name="isSeller" value="seller" id="chk" onclick="showHide()" />
+                                            <label for="chk"> <strong>Are you Seller ? </strong></label>
+                                           
                                      </div>
                                       </div>
+                                     
+
+                                     <fieldset id="open" style="display:none">
+ 
                                       <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-10 control-label"> <h5>Seller Name </h5> (If you are select <strong>User</strong> option then not need to fill this box)</label>
+                                            <label for="inputEmail3" class="col-sm-2 control-label"><h5>Seller Name </h5></label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" name="sellername" placeholder="Seller Name">
+                                               <input type="text" class="form-control" name="sellername" placeholder="Seller Name" />
                                             </div>
                                             </div>
 
                                             <div class="form-group">
-                                                    <label for="inputEmail3" class="col-sm-10 control-label"> <h5> Shop Name</h5> (If you are select <strong>User</strong> option then not need to fill this box) </label>
+                                                    <label for="inputEmail3" class="col-sm-2 control-label"><h5> Shop Name</h5></label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control" name="shopname" placeholder="Shop Name">
+                                                       <input type="text" class="form-control" name="shopname" placeholder="Shop Name" />
                                                     </div>
                                                     </div>
 
                                                     <div class="form-group">
-                                                            <label for="inputEmail3" class="col-sm-10 control-label"> <h5> Shop Address</h5> (If you are select <strong>User</strong> option then not need to fill this box) </label>
+                                                            <label for="inputEmail3" class="col-sm-2 control-label"><h5> Shop Address</h5></label>
                                                             <div class="col-sm-10">
-                                                                <input type="text" class="form-control" name="shopaddress" placeholder="Shop Address">
+                                                               <input type="text" class="form-control" name="shopaddress" placeholder="Shop Address" />
                                                             </div>
                                                             </div>
 
                                                             <div class="form-group">
-                                                                <label for="inputEmail3" class="col-sm-10 control-label"> <h5> Shop Address From Google Map</h5> (If you are select <strong>User</strong> option then not need to fill this box) </label>
+                                                                    <label for="inputEmail3" class="col-sm-10"> <h5> Shop Address From Google Map</h5> </label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" class="form-control" name="shopmap" placeholder="Shop address from Google map url">
+                                                                   <input type="text" class="form-control" name="shopmap" placeholder="https://goo.gl/maps/snVxCDwvBg62">
                                                                 </div>
                                                                 </div>
+                                                            </fieldset>
 
-                                
+                                                                
 
                             <div class="form-group">
                             <label for="inputPassword3" class="col-sm-2 control-label"> <h5>Password</h5></label>
@@ -97,9 +223,43 @@
                                
                          
                         </form> 
-                </div>        
+                </div> 
+                
+                <script type="text/javascript">
+                    function showHide() {
+                      
                         
-                <% include partials/footer %>  
+                            if (document.getElementById('chk').checked) {
+                                document.getElementById('open').style.display = 'block';
+                            } else {
+                                document.getElementById('open').style.display = 'none';
+                            }
+                        }
+                    
+                </script>
+
+                  
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+				  
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+         
+                        
+                
+                <footer class="footer"  > 
+                    <div class="container">
+                        <p class="text-muted">
+                           <a href="/home" style="color:black"> <h4 style="text-align:center"><strong>© DREAM</strong>STORE 2K18</h4> </a>
+                        </p>
+                     
+                    </div>
+      
+                  </footer>
+                  
+           
+              
+            </body>
+    
+        </html>
 
 
 
