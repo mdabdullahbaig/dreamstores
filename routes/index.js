@@ -100,13 +100,7 @@ router.get("/logout",function(req,res){
     res.redirect("/home");
 });
 
- //middlewere open
- function isLoggedIn(req,res,next){
-  if (req.isAuthenticated()) {
-      return next();
-  }
-  res.redirect("/login");
-}
+
 
 // forgot password
 router.get('/forgot', function(req, res) {
@@ -267,8 +261,8 @@ router.get('/forgot', function(req, res) {
                     done(err);
                 }
             
-            // req.flash('success', 'Email address has been verified.');
-            req.flash("success", "WELCOME TO DREAM STORE " + user.username + "Email address has been verified!!!" );
+             req.flash('success', 'Email address has been verified.');
+           // req.flash("success", "WELCOME TO DREAM STORE " + user.username + "Email address has been verified!!!" );
             res.redirect("/home");
             });
           }
@@ -307,7 +301,13 @@ router.get('/forgot', function(req, res) {
   });
 
 
- 
+  //middlewere open
+  function isLoggedIn(req,res,next){
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect("/login");
+  }
 
 
 
