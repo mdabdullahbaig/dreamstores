@@ -73,7 +73,7 @@
                              
                                        <ul>
                                                              
-                                       <% carts.sort().forEach(function(cart) { %>
+                                       <% carts.reverse().forEach(function(cart) { %>
                                               <h4><li><a href="/home/<%= cart.id %>"><%= cart.product %></a></li> </h4> 
                                        <% }); %>
                                        
