@@ -1,17 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var Cart = require("../models/cart");
-// for the shop category
 
-router.get("/home/category/shop", function(req,res) {
-    Cart.find({select: "Shop Information"}, function(err, allshops){
-        if(err) {
-            console.log(err);
-        } else {
-            res.render("category/showshop", {carts: allshops});
-        }
-    });
-});
 
 //for category books
 router.get("/home/category/bookstationeries",function(req,res){
@@ -101,6 +91,18 @@ router.get("/home/category/SweetsCake",function(req,res){
     });
     });
 
+
+    // for the shop category
+
+router.get("/home/category/shop", function(req,res) {
+    Cart.find({select: "Shop Information"}, function(err, allshops){
+        if(err) {
+            console.log(err);
+        } else {
+            res.render("category/showshop", {carts: allshops});
+        }
+    });
+});
 
 
     //middlewere open
