@@ -81,7 +81,7 @@
                             <p>
                                 <strong><%= comment.author.username %></strong><br>
                                
-                                  <a href="# || <%= comment.text %>"> <%= comment.text %></a> , <%= moment(comment.createdAt).format('Do MMM YYYY')%> 
+                                  <a href="<%= comment.text %>"> <%= comment.text %></a> , <%= moment(comment.createdAt).format('Do MMM YYYY')%> 
                                
                             
                             </p>
