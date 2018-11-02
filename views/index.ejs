@@ -6,14 +6,19 @@
 <div class="row">
         <div class="col-md-12">
                 <div class="thumbnail">
+                                <form action="/home" method="GET" class="form-inline my-2 my-lg-3">
+                                        <input class="form-control mr-sm-2 " name="search" type="search" placeholder="Search Products" aria-label="Search" >
+                                        <button class="btn btn-info" type="submit">Search</button>
+                                      
             
                                         <% if(currentUser && currentUser.isSeller){%>
                                         
                                                     
-                                                <a href="/home/new"> <button class="btn bnt-default btn-lg" style="color: brown"><strong>Add Product</strong></button></a>
-                                                <a href="/home/currentseller/profile"> <button class="btn bnt-default btn-lg" style="color: brown; float:right;"><strong>Seller Details</strong></button></a>
+                                                <a href="/home/new"  style="color: brown; padding: 10px "> <button class="btn bnt-default"><strong>Add Product</strong></button></a>
+                                                <a href="/home/currentseller/profile" style="color: brown;"> <button class="btn bnt-default"><strong>Seller Details</strong></button></a>
                                            
                                         <%} %>
+                                        </form>
                                     
                                 </div>
         </div>
