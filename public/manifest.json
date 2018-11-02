@@ -3,19 +3,14 @@
     "short_name": "DREAMSTORE",
     "icons": [
       {
-        "src": "/src/images/icons/store 12X12.png",
+        "src": "/src/images/icons/store 212X212.png",
         "type": "image/png",
-        "sizes": "12x12"
-      },
-      {
-        "src": "/src/images/icons/store 24X24.png",
-        "type": "image/png",
-        "sizes": "24x24"
+        "sizes": "48x48"
       },
       {
         "src": "/src/images/icons/store 48X48.png",
         "type": "image/png",
-        "sizes": "48x48"
+        "sizes": "72x72"
       },
       {
         "src": "/src/images/icons/store 96X96.png",
@@ -32,11 +27,7 @@
         "type": "image/png",
         "sizes": "192x192"
       },
-      {
-        "src": "/src/images/icons/store 212X212.png",
-        "type": "image/png",
-        "sizes": "212x212"
-      }
+     
      
     ],
     "start_url": "https://damp-badlands-99499.herokuapp.com",
