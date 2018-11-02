@@ -3,12 +3,12 @@
     "short_name": "DREAMSTORE",
     "icons": [
       {
-        "src": "/src/images/icons/store 212X212.png",
+        "src": "/src/images/icons/store 48X48.png",
         "type": "image/png",
         "sizes": "48x48"
       },
       {
-        "src": "/src/images/icons/store 48X48.png",
+        "src": "/src/images/icons/store 72X72.png",
         "type": "image/png",
         "sizes": "72x72"
       },
