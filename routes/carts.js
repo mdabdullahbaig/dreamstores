@@ -88,7 +88,7 @@ router.get("/home/new",isLoggedIn, function(req,res){
 //---------------------------------------------------------------------------------------------------------------
 
 // show page
-router.get("/home/:id",isLoggedIn, function(req,res){
+router.get("/home/:id", function(req,res){
     Cart.findById(req.params.id).populate("comments").exec(function(err,foundCart){
         if(err){
             console.log(err);
