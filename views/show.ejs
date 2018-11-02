@@ -81,7 +81,7 @@
                             <p>
                                 <strong><%= comment.author.username %></strong><br>
                                
-                                  <a href="<%= comment.text %>"> <%= comment.text %></a> , <%= moment(comment.createdAt).format('Do MMM YYYY')%> 
+                                  <%= comment.text %> , <%= moment(comment.createdAt).format('Do MMM YYYY')%> 
                                
                             
                             </p>
@@ -94,7 +94,7 @@
                         <%}) %>
                         
                             <form action="/home/<%= cart._id%>/comments" method="POST" class="form-inline my-2 my-lg-6">
-                                            <input class="form-control mr-sm-2" type="text"  name="comment[text]" placeholder="Write a comment/Sharelocation with Googlemap url" aria-label="Search" >
+                                            <input class="form-control mr-sm-2" type="text"  name="comment[text]" placeholder="Write a comment" aria-label="Search" >
                                             <button class="btn btn-primary my-2 my-sm-0" type="submit">Post</button>
                             </form>    
                         
