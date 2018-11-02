@@ -6,12 +6,12 @@
                         <div class="form-group">
                         
                         <div class="col-sm-10">
-                                <h1 style="color:brown">Edit Product Specification</h1>
+                                <h1>Edit Product Specification</h1>
                             <input type="text" class="form-control" name="cart[product]" value="<%= cart.product%>"" >
                         </div>
                         </div>
                         <div class="form-group">
-                            <label for="image" class="col-sm-2 control-label" style="color:brown"><strong>Edit Image </strong> </label>
+                            <label for="image" class="col-sm-2 control-label"><strong>Edit Image </strong> </label>
                     <div class="col-sm-10">
                         
                             <input type="file" name="image" id="image"accept="image/*"  >
@@ -22,7 +22,7 @@
 
                         
                         <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label" style="color:brown"><strong>Information about Product</strong></label>
+                            <label for="inputEmail3" class="col-sm-2 control-label"><strong>Information about Product</strong></label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="cart[description1]" value="<%= cart.description1 %>" >
                                     <input type="text" class="form-control" name="cart[description2]" value="<%= cart.description2 %>" >
@@ -36,21 +36,21 @@
                         <div class="form-group">
                                                 
                             <div class="col-sm-10" >
-                                <textarea cols="20" rows="10" type="text" class="form-control" name="cart[description]" value="<%= cart.description %> "></textarea>
+                                <textarea cols="20" rows="3" type="text" class="form-control" name="cart[description]" value="<%= cart.description %> "></textarea>
                             </div>
                             </div>
                             
                                 <div class="form-group">
                         
-                                        <div class="col-sm-10" style="color:brown">
+                                        <div class="col-sm-10">
                                             <input type="text" class="form-control" name="cart[price]" value="<%= cart.price %>">
                                         </div>
                                         </div>
                         
                         <div class="form-group">
-                         <label for="inputEmail3" class="col-sm-2 control-label" style="color:brown"><strong>  Select Category</strong></label>
+                         <label for="inputEmail3" class="col-sm-2 control-label"><strong>  Select Category</strong></label>
                         <div class="col-sm-10">
-                        <select name="cart[select]" value="<%= cart.select%>" style="color:brown">
+                        <select name="cart[select]" value="<%= cart.select%>">
                                 <option value="Books & Stationeries">Books & Stationeries</option>
                                 <option value="Electronics">Electronics</option>
                                 <option value="Furnitures">Furnitures</option>
@@ -70,8 +70,8 @@
                        
                         <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-default">Update</button>
-                            <a href="/home" >Go Back</a>
+                            <button type="submit" class="btn btn-success">Update</button>
+                            <a href="/home" class="btn btn-primary">Go Back</a>
                         </div>
                         </div>
                     </form>  

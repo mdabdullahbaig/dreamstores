@@ -5,47 +5,49 @@
 
 
 <div class="container">
-    <div class="row " style="display:flex;flex-wrap:wrap;">
+    <div class="row ">
            
             <div class="col-md-5 ">
-                <div class="thumbnail">
-                        <h3 style="padding:0px 4px 0px 8px"> SHOP INFORMATION </h3>
+                <div class="thumbnail" >
+                        <div class="container">
+                        <h3 > SHOP INFORMATION </h3>
 
                             <form action="" class="form-inline">  
                                         <!-- <label ><h4 style="padding:0px 4px 0px 8px">  Shop Name :-  </h4></label> -->
-                                        <h4 style="padding:0px 4px 0px 8px">Shop Name :-    <%= user.shopname %> </h4> 
+                                        <h4>Shop Name :-    <%= user.shopname %> </h4> 
              
                              </form>
 
                              <form action="" class="form-inline">  
                                                 <!-- <label ><h4 style="padding:0px 4px 0px 8px">  Seller Name :-  </h4></label> -->
-                                                <h4 style="padding:0px 4px 0px 8px"> Seller Name :-    <%= user.sellername %> </h4> 
+                                                <h4> Seller Name :-    <%= user.sellername %> </h4> 
                      
                              </form>
 
                              <form action="" class="form-inline">  
                                                         <!-- <label ><h4 style="padding:0px 4px 0px 8px">  Shop Address :-  </h4></label> -->
-                                                        <h4 style="padding:0px 4px 0px 8px">Shop Address :-    <%= user.shopaddress %> </h4> 
+                                                        <h4>Shop Address :-    <%= user.shopaddress %> </h4> 
                              
                               </form>
                             
                            <form action="" class="form-inline">  
                                 <!-- <label ><h4 style="padding:0px 4px 0px 8px">  Email :-   </h4></label> -->
-                                <h4 style="padding:0px 4px 0px 8px"> Email :-    <%= user.email %> </h4> 
+                                <h4> Email :-    <%= user.email %> </h4> 
      
                            </form>
 
                            <form action="" class="form-inline">  
                                 <!-- <label ><h4 style="padding:0px 4px 0px 8px; color: green"> <i class="fa fa-phone"></i>  Call :-</h4></label> -->
-                                <a href="tel:<%= user.mobilenbr %>" class="phone"> <h4 style="padding:0px 4px 0px 8px"> <i class="fa fa-phone" style=" color: rgb(10, 241, 10)"></i>  Call :-       <%= user.mobilenbr %></h4></a> 
+                                <a href="tel:<%= user.mobilenbr %>" class="phone"> <h4> <i class="fa fa-phone" style=" color: rgb(10, 241, 10)"></i>  Call :-       <%= user.mobilenbr %></h4></a> 
                             </form>
 
                             <form action="" class="form-inline">  
                             
                                 
-                                    <a href="<%= user.shopmap%>"> <h4 style="padding:0px 4px 0px 8px"><i class="fa fa-map-marker" aria-hidden="true" style="color:black"></i>   Shop on Google Map</h4></a>
+                                    <a href="<%= user.shopmap%>"> <h4><i class="fa fa-map-marker" aria-hidden="true" style="color:black"></i>   Shop on Google Map</h4></a>
                                 
                             </form>
+                        </div>
 
                     </div>
             </div>
@@ -55,7 +57,7 @@
 
                         <div class="thumbnail">
                                <div class="container">
-                                 <h3 >Total Products Uploaded By <%= user.shopname %> </h3>
+                                 <h3 >Product uploaded by <%= user.shopname %> </h3>
                                </div>                      
                                 
                             

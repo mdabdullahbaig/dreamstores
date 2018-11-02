@@ -3,21 +3,23 @@
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
     
-
-<div class="container"> 
-        <header style="padding: 0px 0px 8px 0px">
+<div class="row">
+        <div class="col-md-12">
+                <div class="thumbnail">
             
-                <% if(currentUser && currentUser.isSeller){%>
-                    <div class="container">
-                            
-                        <a href="/home/new"> <button class="btn bnt-default btn-lg" style="color: brown"><strong>Add Product</strong></button></a>
-                        <a href="/home/currentseller/profile"> <button class="btn bnt-default btn-lg" style="color: brown; float:right;"><strong>Seller Details</strong></button></a>
-                    </div>    
-                <%} %>
-            
-        </header>
+                                        <% if(currentUser && currentUser.isSeller){%>
+                                        
+                                                    
+                                                <a href="/home/new"> <button class="btn bnt-default btn-lg" style="color: brown"><strong>Add Product</strong></button></a>
+                                                <a href="/home/currentseller/profile"> <button class="btn bnt-default btn-lg" style="color: brown; float:right;"><strong>Seller Details</strong></button></a>
+                                           
+                                        <%} %>
+                                    
+                                </div>
+        </div>
+</div>
 
-
+       
         <div class="row text-center" style="display:flex;flex-wrap:wrap;">
 
                 <div class="col-md-12">
@@ -47,7 +49,7 @@
         </div>
                     
 
-</div>
+
 
 
 
