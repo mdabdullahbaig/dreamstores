@@ -40,7 +40,9 @@
     "socket.io": "^2.1.1",
     "web-push": "^3.3.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "compress-images": "^1.4.6"
+  },
   "keywords": [],
   "repository": {},
   "description": ""
