@@ -29,6 +29,7 @@ var express             =  require("express"),
        indexRoutes       =  require("./routes/index"), 
        commentRoutes     =  require("./routes/comments"),
        categoryRoutes    =  require("./routes/categories");
+    //    reviewRoutes      = require("./routes/reviews");
     
    var configDB = require('./config/database.js');
 
@@ -90,6 +91,9 @@ app.use(indexRoutes);
 app.use(cartRoutes);
 app.use(commentRoutes);
 app.use(categoryRoutes);
+
+
+// app.use("/home/:id/reviews", reviewRoutes);
  
 
 app.get("/home/currentuser/profile", function(req,res){
