@@ -1,562 +1,599 @@
 <!DOCTYPE html>
-	<html lang="en">
-		<head>
-    
-      <meta charset="UTF-8">
-      <meta name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html lang="en">
 
-      <title>DREAM STORES</title>
+<head>
 
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-      <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> -->
-  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
-  <!-- <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css"> -->
-
-        <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
-        <!-- <link href="css/font-awesome.min.css" rel="stylesheet"> -->
-        <!-- <link href="css/prettyPhoto.css" rel="stylesheet"> -->
-        <!-- <link href="css/price-range.css" rel="stylesheet"> -->
-        <!-- <link href="css/animate.css" rel="stylesheet"> -->
-        <link href="css/main.css" rel="stylesheet">
-        <link href="css/responsive.css" rel="stylesheet">
+    <title>DREAM STORES</title>
 
 
 
-
-  <!-- <link rel="stylesheet" href="/src/css/app.css">
-  <link rel="stylesheet" href="/src/css/feed.css"> -->
-  <link rel="manifest" href="/manifest.json">
-  <link rel="shortcut icon" href="favicon.ico">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="#DC0512">
-  <meta name="apple-mobile-web-app-title" content="DREAMSTORE">
-  <link rel="apple-touch-icon" href="src/images/icons/store 48X48.png" sizes="48x48">
-  <link rel="apple-touch-icon" href="src/images/icons/store 72X72.png" sizes="72x72">
-  <link rel="apple-touch-icon" href="src/images/icons/store 96X96.png" sizes="96x96">
-  <link rel="apple-touch-icon" href="src/images/icons/store 144X144.png" sizes="144x144">
-  <link rel="apple-touch-icon" href="src/images/icons/store 192X192.png" sizes="192x192">
-  <meta name="msapplication-TileColor" content="#DC0512">
-  <meta name="theme-color" content="#3f51b5">
-  
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#DC0512">
+    <meta name="apple-mobile-web-app-title" content="DREAMSTORE">
+    <link rel="apple-touch-icon" href="src/images/icons/store 48X48.png" sizes="48x48">
+    <link rel="apple-touch-icon" href="src/images/icons/store 72X72.png" sizes="72x72">
+    <link rel="apple-touch-icon" href="src/images/icons/store 96X96.png" sizes="96x96">
+    <link rel="apple-touch-icon" href="src/images/icons/store 144X144.png" sizes="144x144">
+    <link rel="apple-touch-icon" href="src/images/icons/store 192X192.png" sizes="192x192">
+    <meta name="msapplication-TileColor" content="#DC0512">
+    <meta name="theme-color" content="#3f51b5">
 
 
 
 
-			<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-			
-			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-            <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
-            <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
-        
-        </head>
-        <body >
-			
-            
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                       <a href="/" style="padding-left:15px"> <img src="images/home/store35x35.png"></a>
-                        <a class="navbar-brand" href="/" ><b>DREAM</b>STORES</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                        </button>
-                      
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                          <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active" style="padding:8px">
-                              <a class="nav-link" href="/home"><i class="fa fa-home"></i>   Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            
-                
-                            
-                            <li class="nav-item dropdown" style="padding:8px">
-                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-book"></i>   Category
-                              </a>
-                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/home/category/bookstationeries">Books & Stationeries</a>
-                                <a class="dropdown-item" href="/home/category/Electronics">Electronics</a>
-                                <a class="dropdown-item" href="/home/category/Furnitures">Furnitures</a>
-                                <a class="dropdown-item" href="/home/category/HomeAppliances">Home Appliances</a>
-                                <a class="dropdown-item" href="/home/category/Fashion">Fashion</a>
-                                <a class="dropdown-item" href="/home/category/Phones">Phones</a>
-                                <a class="dropdown-item" href="/home/category/Sports">Sports</a>
-                                <a class="dropdown-item" href="/home/category/SweetsCake">Sweets & Cake</a>
-                            
-                              </div>
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="/" style="padding-left:15px"> <img src="images/home/store35x35.png"></a>
+        <a class="navbar-brand" href="/"><b>DREAM</b>STORES</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active" style="padding:8px">
+                    <a class="nav-link" href="/home"><i class="fa fa-home"></i> Home <span
+                            class="sr-only">(current)</span></a>
+                </li>
 
 
 
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right" style="padding:8px">
-                            <!-- <li style="padding:8px"><a href="" style="color: black"><i class="fa fa-id-card"></i >   About </a></li> -->
-                            <li ><a href=""  style="color:black"> <i class="fa fa-address-book"></i>   Contact</a></li>
-                            <li ><a href="" style="color:black"> <i class="fa fa-info-circle"></i>   Help  </a></li>
-                            <% if(!currentUser){%>
-                                <li> <a  href="/login" style="color:black"><i class="fa fa-sign-in"></i>   Login</a>
-                                <li> <a  href="/register" style="color:black"><i class="fa fa-user-plus"></i>   Signup</a>
-                            <%} else{%>
-                               
-                                <li><a href="/home/currentuser/profile" style="color:black"><i class="fa fa-sign-in"></i>   Signed in as <%= currentUser.username %></a>
-                                <li> <a  href="/logout" style="color:black">Logout   <i class="fa fa-sign-out"></i></a>
-                            <% } %>
+                <li class="nav-item dropdown" style="padding:8px">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-book"></i> Category
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/home/category/bookstationeries">Books & Stationeries</a>
+                        <a class="dropdown-item" href="/home/category/Electronics">Electronics</a>
+                        <a class="dropdown-item" href="/home/category/Furnitures">Furnitures</a>
+                        <a class="dropdown-item" href="/home/category/HomeAppliances">Home Appliances</a>
+                        <a class="dropdown-item" href="/home/category/Fashion">Fashion</a>
+                        <a class="dropdown-item" href="/home/category/Phones">Phones</a>
+                        <a class="dropdown-item" href="/home/category/Sports">Sports</a>
+                        <a class="dropdown-item" href="/home/category/SweetsCake">Sweets & Cake</a>
 
-
-                        </ul>
-                    </div>
-                </nav>
-
-                      
-                
-                    
-        
-                            <section id="slider"><!--slider-->
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div id="slider-carousel" class="carousel slide" data-ride="carousel">
-                                                <ol class="carousel-indicators">
-                                                    <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-                                                    <li data-target="#slider-carousel" data-slide-to="1"></li>
-                                                    <li data-target="#slider-carousel" data-slide-to="2"></li>
-                                                </ol>
-                                                
-                                                <div class="carousel-inner">
-                                                    <div class="item active">
-                                                        <div class="col-sm-6">
-                                                            <h1 style="color:brown"><strong>DREAM</strong>STORES</h1>
-                                                            <h2>WELCOME TO DREAM STORES</h2>
-                                                            <h3>Not Just a Store.</h3>
-                                                            <a href="/home"> <button type="button" class="btn btn-default get"><b>GET STARTED</b></button></a>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <img style="width:470px;height:200px" src="images/home/shoponline.jpg" class="girl img-responsive" alt="" />
-                                                            <!-- <img src="images/home/pricing.png"  class="pricing" alt="" /> -->
-                                                        </div>
-                                                    </div>
-                                                    <div class="item">
-                                                        <div class="col-sm-6">
-                                                            <h1 style="color:brown"><strong>DREAM</strong>STORES</h1>
-                                                            <h2>WELCOME TO DREAM STORES</h2>
-                                                            <h3>Not Just a Store.</h3>
-                                                           <a href="/home"> <button type="button" class="btn btn-default get"><b>GET STARTED</b> </button> </a>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <img style="width:470px;height:200px" src="images/home/shopping.jpg" class="girl img-responsive" alt="" />
-                                                            <!-- <img src="images/home/pricing.png"  class="pricing" alt="" /> -->
-                                                        </div>
-                                                    </div>
-                                                    
-                                                    <div class="item">
-                                                        <div class="col-sm-6">
-                                                            <h1 style="color:brown"><strong>DREAM</strong>STORES</h1>
-                                                            <h2>WELCOME TO DREAM STORES</h2>
-                                                            <h3>Not Just a Store.</h3>
-                                                            <a href="/home">   <button type="button" class="btn btn-default get"><b>GET STARTED</b></button></a>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <img style="width:470px;height:200px" src="images/home/shareshop.jpg" class="girl img-responsive" alt="" />
-                                                            <!-- <img src="images/home/pricing.png" class="pricing" alt="" /> -->
-                                                           
-                                                        </div>
-                                                    </div>
-                                                    
-                                                </div>
-                                                
-                                                <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-                                                    <i class="fa fa-angle-left"></i>
-                                                </a>
-                                                <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-                                                    <i class="fa fa-angle-right"></i>
-                                                </a>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </section><!--/slider-->
-
-                            
-                    <div class="row">
-                        <div class="container">
-                            <div class="features_items"><!--features_items-->
-                                <h2 class="title text-center">Features Items</h2>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                                <div class="productinfo text-center">
-                                                    <img src="images/home/stationeries.png" alt="" />
-                                                    <!-- <h2>$56</h2> -->
-                                                    <p>Books and Stationeries</p>
-                                                    <a href="/home/category/bookstationeries" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Products</a>
-                                                </div>
-                                                <div class="product-overlay">
-                                                    <div class="overlay-content">
-                                                        <!-- <h2>$56</h2> -->
-                                                        <p>Books and Stationeries</p>
-                                                        <a href="/home/category/bookstationeries" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Products</a>
-                                                    </div>
-                                                </div>
-                                        </div>
-                                        <!-- <div class="choose">
-                                            <ul class="nav nav-pills nav-justified">
-                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                            </ul>
-                                        </div> -->
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="images/home/homeappliances.png" alt="" />
-                                                <!-- <h2>$56</h2> -->
-                                                <p>Electronics</p>
-                                                <a href="/home/category/Electronics" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Products</a>
-                                            </div>
-                                            <div class="product-overlay">
-                                                <div class="overlay-content">
-                                                    <!-- <h2>$56</h2> -->
-                                                    <p>Electronics</p>
-                                                    <a href="/home/category/Electronics" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Products</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- <div class="choose">
-                                            <ul class="nav nav-pills nav-justified">
-                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                            </ul>
-                                        </div> -->
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="images/home/furnitures.png" alt="" />
-                                                <!-- <h2>$56</h2> -->
-                                                <p>Furnitures</p>
-                                                <a href="/home/category/Furnitures" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Products</a>
-                                            </div>
-                                            <div class="product-overlay">
-                                                <div class="overlay-content">
-                                                    <!-- <h2>$56</h2> -->
-                                                    <p>Furnitures</p>
-                                                    <a href="/home/category/Furnitures" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Products</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- <div class="choose">
-                                            <ul class="nav nav-pills nav-justified">
-                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                            </ul>
-                                        </div> -->
-                                    </div>
-                                </div>
-                            </div><!--features_items-->
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="container">
-                            <div class="features_items"><!--features_items-->
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="images/home/homeappliance.png" alt="" />
-                                                <!-- <h2>$56</h2> -->
-                                                <p>Home Appliances</p>
-                                                <a href="/home/category/HomeAppliances" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Products</a>
-                                            </div>
-                                            <div class="product-overlay">
-                                                <div class="overlay-content">
-                                                    <!-- <h2>$56</h2> -->
-                                                    <p>Home Appliances</p>
-                                                    <a href="/home/category/HomeAppliances" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Products</a>
-                                                </div>
-                                            </div>
-                                            <!-- <img src="images/home/sale.png" class="new" alt="" /> -->
-                                        </div>
-                                        <!-- <div class="choose">
-                                            <ul class="nav nav-pills nav-justified">
-                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                            </ul>
-                                        </div> -->
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="images/home/fashion.png" alt="" />
-                                                <!-- <h2>$56</h2> -->
-                                                <p>Fashion</p>
-                                                <a href="/home/category/Fashion" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Products</a>
-                                            </div>
-                                            <div class="product-overlay">
-                                                <div class="overlay-content">
-                                                    <!-- <h2>$56</h2> -->
-                                                    <p>Fashion</p>
-                                                    <a href="/home/category/Fashion" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Products</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- <div class="choose">
-                                            <ul class="nav nav-pills nav-justified">
-                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                            </ul>
-                                        </div> -->
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="images/home/phones.png" alt="" />
-                                                <!-- <h2>$56</h2> -->
-                                                <p>Smart Phones</p>
-                                                <a href="/home/category/Phones" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Products</a>
-                                            </div>
-                                            <div class="product-overlay">
-                                                <div class="overlay-content">
-                                                    <!-- <h2>$56</h2> -->
-                                                    <p>Smart Phones</p>
-                                                    <a href="/home/category/Phones" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Products</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- <div class="choose">
-                                            <ul class="nav nav-pills nav-justified">
-                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                            </ul>
-                                        </div> -->
-                                    </div>
-                                </div>
-                                        
-                            </div><!--features_items-->
-                        </div>
                     </div>
 
-                                <div class="row">
-                                    <div class="container">
-                                        <div class="features_items"><!--features_items-->
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="images/home/sports.png" alt="" />
-                                                <!-- <h2>$56</h2> -->
-                                                <p>Sports</p>
-                                                <a href="/home/category/Sports" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Products</a>
-                                            </div>
-                                            <div class="product-overlay">
-                                                <div class="overlay-content">
-                                                    <!-- <h2>$56</h2> -->
-                                                    <p>Sports</p>
-                                                    <a href="/home/category/Sports" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Products</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- <div class="choose">
-                                            <ul class="nav nav-pills nav-justified">
-                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                            </ul>
-                                        </div> -->
-                                    </div>
+
+
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" style="padding:8px">
+                <!-- <li style="padding:8px"><a href="" style="color: black"><i class="fa fa-id-card"></i >   About </a></li> -->
+                <li><a href="" style="color:black"> <i class="fa fa-address-book"></i> Contact</a></li>
+                <li><a href="" style="color:black"> <i class="fa fa-info-circle"></i> Help </a></li>
+                <% if(!currentUser){%>
+                <li> <a href="/login" style="color:black"><i class="fa fa-sign-in"></i> Login</a>
+                <li> <a href="/register" style="color:black"><i class="fa fa-user-plus"></i> Signup</a>
+                    <%} else{%>
+
+                <li><a href="/home/currentuser/profile" style="color:black"><i class="fa fa-sign-in"></i> Signed in as
+                        <%= currentUser.username %></a>
+                <li> <a href="/logout" style="color:black">Logout <i class="fa fa-sign-out"></i></a>
+                    <% } %>
+
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+    <section id="slider">
+        <!--slider-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#slider-carousel" data-slide-to="1"></li>
+                            <li data-target="#slider-carousel" data-slide-to="2"></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="col-sm-6">
+                                    <h1 style="color:brown"><strong>DREAM</strong>STORES</h1>
+                                    <h2>WELCOME TO DREAM STORES</h2>
+                                    <h3>Not Just a Store.</h3>
+                                    <a href="/home"> <button type="button" class="btn btn-default get"><b>GET
+                                                STARTED</b></button></a>
                                 </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="images/home/sweets.png" alt="" />
-                                                <!-- <h2>$56</h2> -->
-                                                <p>Sweets</p>
-                                                <a href="/home/category/SweetsCake" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Products</a>
-                                            </div>
-                                            <div class="product-overlay">
-                                                <div class="overlay-content">
-                                                    <!-- <h2>$56</h2> -->
-                                                    <p>Sweets</p>
-                                                    <a href="/home/category/SweetsCake" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Products</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- <div class="choose">
-                                            <ul class="nav nav-pills nav-justified">
-                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                            </ul>
-                                        </div> -->
-                                    </div>
+                                <div class="col-sm-6">
+                                    <img style="width:470px;height:200px" src="images/home/shoponline.jpg"
+                                        class="girl img-responsive" alt="" />
+                                    <!-- <img src="images/home/pricing.png"  class="pricing" alt="" /> -->
                                 </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="images/home/cakes.png" alt="" />
-                                                <!-- <h2>$56</h2> -->
-                                                <p>Cakes</p>
-                                                <a href="/home/category/SweetsCake" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Products</a>
-                                            </div>
-                                            <div class="product-overlay">
-                                                <div class="overlay-content">
-                                                    <!-- <h2>$56</h2> -->
-                                                    <p>Cakes</p>
-                                                    <a href="/home/category/SweetsCake" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Products</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- <div class="choose">
-                                            <ul class="nav nav-pills nav-justified">
-                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                            </ul>
-                                        </div> -->
-                                    </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-sm-6">
+                                    <h1 style="color:brown"><strong>DREAM</strong>STORES</h1>
+                                    <h2>WELCOME TO DREAM STORES</h2>
+                                    <h3>Not Just a Store.</h3>
+                                    <a href="/home"> <button type="button" class="btn btn-default get"><b>GET
+                                                STARTED</b> </button> </a>
                                 </div>
-                                
-                            </div><!--features_items-->
+                                <div class="col-sm-6">
+                                    <img style="width:470px;height:200px" src="images/home/shopping.jpg"
+                                        class="girl img-responsive" alt="" />
+                                    <!-- <img src="images/home/pricing.png"  class="pricing" alt="" /> -->
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="col-sm-6">
+                                    <h1 style="color:brown"><strong>DREAM</strong>STORES</h1>
+                                    <h2>WELCOME TO DREAM STORES</h2>
+                                    <h3>Not Just a Store.</h3>
+                                    <a href="/home"> <button type="button" class="btn btn-default get"><b>GET
+                                                STARTED</b></button></a>
+                                </div>
+                                <div class="col-sm-6">
+                                    <img style="width:470px;height:200px" src="images/home/shareshop.jpg"
+                                        class="girl img-responsive" alt="" />
+                                    <!-- <img src="images/home/pricing.png" class="pricing" alt="" /> -->
+
+                                </div>
+                            </div>
+
                         </div>
+
+                        <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
                     </div>
 
-                            <div class="recommended_items"><!--recommended_items-->
-                                <h2 class="title text-center">recommended items</h2>
-                                
-                                <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="item active">	
-                                            <div class="col-sm-4">
-                                                <div class="product-image-wrapper">
-                                                    <div class="single-products">
-                                                        <div class="productinfo text-center">
-                                                            <img class="img-circle" src="images/home/dreamstore1.png" alt="" />
-                                                            <!-- <h2>$56</h2> -->
-                                                            <p> Shops under <b>DREAM</b>STORE</p>
-                                                            <a href="/home/category/shop" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Stores</a>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="product-image-wrapper">
-                                                    <div class="single-products">
-                                                        <div class="productinfo text-center">
-                                                            <img  style="width:300px;height:212px" src="images/home/Dream cabs.png" alt="" />
-                                                            <!-- <h2>$56</h2> -->
-                                                            <p>Cabs under <b>DREAM</b>STORE </p>
-                                                            <p style="color:brown"><b>COMMING</b>SOON</p>
-                                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i> See Cabs</a>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="product-image-wrapper">
-                                                    <div class="single-products">
-                                                        <div class="productinfo text-center">
-                                                                <img class="img-circle" src="images/home/dreamstore1.png" alt="" />
-                                                            <!-- <h2>$56</h2> -->
-                                                            <p>Shops under <b>DREAM</b>STORE</p>
-                                                            <a href="/home/category/shop" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Stores</a>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">	
-                                            <div class="col-sm-4">
-                                                <div class="product-image-wrapper">
-                                                    <div class="single-products">
-                                                        <div class="productinfo text-center">
-                                                            <img style="width:300px;height:212px" src="images/home/Dream cabs.png" alt="" />
-                                                            <!-- <h2>$56</h2> -->
-                                                            <p>Cabs under <b>DREAM</b>STORE </p>
-                                                            <p style="color:brown"><b>COMMING</b>SOON</p>
-                                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Cabs</a>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="product-image-wrapper">
-                                                    <div class="single-products">
-                                                        <div class="productinfo text-center">
-                                                            <img class="img-circle" src="images/home/dreamstore1.png" alt="" />
-                                                            <!-- <h2>$56</h2> -->
-                                                            <p>Shops under <b>DREAM</b>STORE</p>
-                                                            <a href="/home/category/shop" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Stores</a>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="product-image-wrapper">
-                                                    <div class="single-products">
-                                                        <div class="productinfo text-center">
-                                                            <img  style="width:300px;height:212px" src="images/home/Dream cabs.png" alt="" />
-                                                            <!-- <h2>$56</h2> -->
-                                                            <p>Cabs under <b>DREAM</b>STORE </p>
-                                                            <p style="color:brown"><b>COMMING</b>SOON</p>
-                                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See Cabs</a>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                     <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
-                                        <i class="fa fa-angle-left"></i>
-                                      </a>
-                                      <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
-                                        <i class="fa fa-angle-right"></i>
-                                      </a>			
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/slider-->
+
+
+    <div class="row">
+        <div class="container">
+            <div class="features_items">
+                <!--features_items-->
+                <h2 class="title text-center">Features Items</h2>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="images/home/stationeries.png" alt="" />
+                                <!-- <h2>$56</h2> -->
+                                <p>Books and Stationeries</p>
+                                <a href="/home/category/bookstationeries" class="btn btn-default add-to-cart"><i
+                                        class="fa fa-eye"></i>See Products</a>
+                            </div>
+                            <div class="product-overlay">
+                                <div class="overlay-content">
+                                    <!-- <h2>$56</h2> -->
+                                    <p>Books and Stationeries</p>
+                                    <a href="/home/category/bookstationeries" class="btn btn-default add-to-cart"><i
+                                            class="fa fa-eye"></i>See Products</a>
                                 </div>
-                            </div><!--/recommended_items-->
-                        
-
-                       
-
-                <footer id="footer">  
-                     <div class="footer-bottom"  >
-                        <div class="container" style="text-align:center">
-                            <a href="https://www.facebook.com/" style="padding:8px; color:royalblue;"><strong><i class="fa fa-facebook"></i> Facebook</strong></a>
-                            <a href=""  style="padding:8px; color:rgb(250, 133, 143);"><strong><i class="fa fa-instagram"></i> Instagram</strong> </a>
-                            <a href=""  style="padding:8px; color:rgb(43, 41, 41);"><strong><i class="fa fa-envelope-o"></i> Email</strong> </a>
-
-                            <p class="text-muted">
-                               <a href="/home" style="color:black"> <h4 style="text-align:center"><strong>© DREAM</strong>STORE 2K18</h4> </a>
-                            </p>
-                         
+                            </div>
                         </div>
-                     </div> 
-          
-                 </footer>
-                      
-                     
-                      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-				  
-                      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-                      <script src="js/jquery.js"></script>
-                      <script src="js/bootstrap.min.js"></script>
-                      <script src="js/jquery.scrollUp.min.js"></script>
-                      <!-- <script src="js/price-range.js"></script> -->
-                      <!-- <script src="js/jquery.prettyPhoto.js"></script> -->
-                      <script src="js/main.js"></script>   
-                </body>
-        
-            </html>
+                        <!-- <div class="choose">
+                                            <ul class="nav nav-pills nav-justified">
+                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                                            </ul>
+                                        </div> -->
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="images/home/homeappliances.png" alt="" />
+                                <!-- <h2>$56</h2> -->
+                                <p>Electronics</p>
+                                <a href="/home/category/Electronics" class="btn btn-default add-to-cart"><i
+                                        class="fa fa-eye"></i>See Products</a>
+                            </div>
+                            <div class="product-overlay">
+                                <div class="overlay-content">
+                                    <!-- <h2>$56</h2> -->
+                                    <p>Electronics</p>
+                                    <a href="/home/category/Electronics" class="btn btn-default add-to-cart"><i
+                                            class="fa fa-eye"></i>See Products</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="choose">
+                                            <ul class="nav nav-pills nav-justified">
+                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                                            </ul>
+                                        </div> -->
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="images/home/furnitures.png" alt="" />
+                                <!-- <h2>$56</h2> -->
+                                <p>Furnitures</p>
+                                <a href="/home/category/Furnitures" class="btn btn-default add-to-cart"><i
+                                        class="fa fa-eye"></i>See Products</a>
+                            </div>
+                            <div class="product-overlay">
+                                <div class="overlay-content">
+                                    <!-- <h2>$56</h2> -->
+                                    <p>Furnitures</p>
+                                    <a href="/home/category/Furnitures" class="btn btn-default add-to-cart"><i
+                                            class="fa fa-eye"></i>See Products</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="choose">
+                                            <ul class="nav nav-pills nav-justified">
+                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                                            </ul>
+                                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!--features_items-->
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="features_items">
+                <!--features_items-->
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="images/home/homeappliance.png" alt="" />
+                                <!-- <h2>$56</h2> -->
+                                <p>Home Appliances</p>
+                                <a href="/home/category/HomeAppliances" class="btn btn-default add-to-cart"><i
+                                        class="fa fa-eye"></i>See Products</a>
+                            </div>
+                            <div class="product-overlay">
+                                <div class="overlay-content">
+                                    <!-- <h2>$56</h2> -->
+                                    <p>Home Appliances</p>
+                                    <a href="/home/category/HomeAppliances" class="btn btn-default add-to-cart"><i
+                                            class="fa fa-eye"></i>See Products</a>
+                                </div>
+                            </div>
+                            <!-- <img src="images/home/sale.png" class="new" alt="" /> -->
+                        </div>
+                        <!-- <div class="choose">
+                                            <ul class="nav nav-pills nav-justified">
+                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                                            </ul>
+                                        </div> -->
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="images/home/fashion.png" alt="" />
+                                <!-- <h2>$56</h2> -->
+                                <p>Fashion</p>
+                                <a href="/home/category/Fashion" class="btn btn-default add-to-cart"><i
+                                        class="fa fa-eye"></i>See Products</a>
+                            </div>
+                            <div class="product-overlay">
+                                <div class="overlay-content">
+                                    <!-- <h2>$56</h2> -->
+                                    <p>Fashion</p>
+                                    <a href="/home/category/Fashion" class="btn btn-default add-to-cart"><i
+                                            class="fa fa-eye"></i>See Products</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="choose">
+                                            <ul class="nav nav-pills nav-justified">
+                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                                            </ul>
+                                        </div> -->
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="images/home/phones.png" alt="" />
+                                <!-- <h2>$56</h2> -->
+                                <p>Smart Phones</p>
+                                <a href="/home/category/Phones" class="btn btn-default add-to-cart"><i
+                                        class="fa fa-eye"></i>See Products</a>
+                            </div>
+                            <div class="product-overlay">
+                                <div class="overlay-content">
+                                    <!-- <h2>$56</h2> -->
+                                    <p>Smart Phones</p>
+                                    <a href="/home/category/Phones" class="btn btn-default add-to-cart"><i
+                                            class="fa fa-eye"></i>See Products</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="choose">
+                                            <ul class="nav nav-pills nav-justified">
+                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                                            </ul>
+                                        </div> -->
+                    </div>
+                </div>
+
+            </div>
+            <!--features_items-->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container">
+            <div class="features_items">
+                <!--features_items-->
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="images/home/sports.png" alt="" />
+                                <!-- <h2>$56</h2> -->
+                                <p>Sports</p>
+                                <a href="/home/category/Sports" class="btn btn-default add-to-cart"><i
+                                        class="fa fa-eye"></i>See Products</a>
+                            </div>
+                            <div class="product-overlay">
+                                <div class="overlay-content">
+                                    <!-- <h2>$56</h2> -->
+                                    <p>Sports</p>
+                                    <a href="/home/category/Sports" class="btn btn-default add-to-cart"><i
+                                            class="fa fa-eye"></i>See Products</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="choose">
+                                            <ul class="nav nav-pills nav-justified">
+                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                                            </ul>
+                                        </div> -->
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="images/home/sweets.png" alt="" />
+                                <!-- <h2>$56</h2> -->
+                                <p>Sweets</p>
+                                <a href="/home/category/SweetsCake" class="btn btn-default add-to-cart"><i
+                                        class="fa fa-eye"></i>See Products</a>
+                            </div>
+                            <div class="product-overlay">
+                                <div class="overlay-content">
+                                    <!-- <h2>$56</h2> -->
+                                    <p>Sweets</p>
+                                    <a href="/home/category/SweetsCake" class="btn btn-default add-to-cart"><i
+                                            class="fa fa-eye"></i>See Products</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="choose">
+                                            <ul class="nav nav-pills nav-justified">
+                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                                            </ul>
+                                        </div> -->
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="product-image-wrapper">
+                        <div class="single-products">
+                            <div class="productinfo text-center">
+                                <img src="images/home/cakes.png" alt="" />
+                                <!-- <h2>$56</h2> -->
+                                <p>Cakes</p>
+                                <a href="/home/category/SweetsCake" class="btn btn-default add-to-cart"><i
+                                        class="fa fa-eye"></i>See Products</a>
+                            </div>
+                            <div class="product-overlay">
+                                <div class="overlay-content">
+                                    <!-- <h2>$56</h2> -->
+                                    <p>Cakes</p>
+                                    <a href="/home/category/SweetsCake" class="btn btn-default add-to-cart"><i
+                                            class="fa fa-eye"></i>See Products</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="choose">
+                                            <ul class="nav nav-pills nav-justified">
+                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                                <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                                            </ul>
+                                        </div> -->
+                    </div>
+                </div>
+
+            </div>
+            <!--features_items-->
+        </div>
+    </div>
+
+    <div class="recommended_items">
+        <!--recommended_items-->
+        <h2 class="title text-center">recommended items</h2>
+
+        <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img class="img-circle" src="images/home/dreamstore1.png" alt="" />
+                                    <!-- <h2>$56</h2> -->
+                                    <p> Shops under <b>DREAM</b>STORE</p>
+                                    <a href="/home/category/shop" class="btn btn-default add-to-cart"><i
+                                            class="fa fa-eye"></i>See Stores</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img style="width:300px;height:212px" src="images/home/Dream cabs.png" alt="" />
+                                    <!-- <h2>$56</h2> -->
+                                    <p>Cabs under <b>DREAM</b>STORE </p>
+                                    <p style="color:brown"><b>COMMING</b>SOON</p>
+                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i> See
+                                        Cabs</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img class="img-circle" src="images/home/dreamstore1.png" alt="" />
+                                    <!-- <h2>$56</h2> -->
+                                    <p>Shops under <b>DREAM</b>STORE</p>
+                                    <a href="/home/category/shop" class="btn btn-default add-to-cart"><i
+                                            class="fa fa-eye"></i>See Stores</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img style="width:300px;height:212px" src="images/home/Dream cabs.png" alt="" />
+                                    <!-- <h2>$56</h2> -->
+                                    <p>Cabs under <b>DREAM</b>STORE </p>
+                                    <p style="color:brown"><b>COMMING</b>SOON</p>
+                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See
+                                        Cabs</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img class="img-circle" src="images/home/dreamstore1.png" alt="" />
+                                    <!-- <h2>$56</h2> -->
+                                    <p>Shops under <b>DREAM</b>STORE</p>
+                                    <a href="/home/category/shop" class="btn btn-default add-to-cart"><i
+                                            class="fa fa-eye"></i>See Stores</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img style="width:300px;height:212px" src="images/home/Dream cabs.png" alt="" />
+                                    <!-- <h2>$56</h2> -->
+                                    <p>Cabs under <b>DREAM</b>STORE </p>
+                                    <p style="color:brown"><b>COMMING</b>SOON</p>
+                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-eye"></i>See
+                                        Cabs</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+    </div>
+    <!--/recommended_items-->
+
+
+
+
+    <footer id="footer">
+        <div class="footer-bottom">
+            <div class="container" style="text-align:center">
+                <a href="https://www.facebook.com/" style="padding:8px; color:royalblue;"><strong><i
+                            class="fa fa-facebook"></i> Facebook</strong></a>
+                <a href="" style="padding:8px; color:rgb(250, 133, 143);"><strong><i class="fa fa-instagram"></i>
+                        Instagram</strong> </a>
+                <a href="" style="padding:8px; color:rgb(43, 41, 41);"><strong><i class="fa fa-envelope-o"></i>
+                        Email</strong> </a>
+
+                <p class="text-muted">
+                    <a href="/home" style="color:black">
+                        <h4 style="text-align:center"><strong>© DREAM</strong>STORE 2K18</h4>
+                    </a>
+                </p>
+
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
