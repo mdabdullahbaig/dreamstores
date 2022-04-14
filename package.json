@@ -12,7 +12,7 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.2",
     "@sendgrid/mail": "^6.3.1",
-    "async": "^2.6.1",
+    "async": "^3.2.2",
     "bcrypt": "^3.0.2",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
